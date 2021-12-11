@@ -43,7 +43,7 @@ animation = "idle"
 [sub_resource type="AnimationNodeTimeScale" id=6]
 
 [sub_resource type="AnimationNodeBlendTree" id=4]
-graph_offset = Vector2( 0, 101.5 )
+graph_offset = Vector2( 0, 50.75 )
 nodes/Animation/node = SubResource( 3 )
 nodes/Animation/position = Vector2( 80, 180 )
 nodes/TimeScale/node = SubResource( 6 )
@@ -60,8 +60,8 @@ shape = SubResource( 1 )
 [node name="SpriteContainer" type="Node2D" parent="."]
 
 [node name="Sprite" type="Sprite" parent="SpriteContainer"]
-position = Vector2( 2, 7.10543e-15 )
-scale = Vector2( 2.33333, 2.2381 )
+position = Vector2( 7.15256e-07, 0 )
+scale = Vector2( 0.953447, 0.929218 )
 z_index = 10
 texture = ExtResource( 2 )
 
