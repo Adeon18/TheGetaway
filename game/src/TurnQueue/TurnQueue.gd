@@ -5,8 +5,11 @@ class_name TurnQueue
 var active_char
 
 
-func initialize():
+
+
+func _ready():
 	active_char = get_child(0)
+	play_turn()
 
 
 func play_turn():
