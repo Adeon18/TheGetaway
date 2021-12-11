@@ -9,7 +9,6 @@ extents = Vector2( 32, 32 )
 
 [node name="Tile1" type="Sprite" parent="."]
 position = Vector2( 32, 32 )
-scale = Vector2( 0.5, 0.5 )
 texture = ExtResource( 1 )
 region_enabled = true
 region_rect = Rect2( 4, 4, 64, 64 )
@@ -26,7 +25,6 @@ shape = SubResource( 1 )
 
 [node name="Tile2" type="Sprite" parent="."]
 position = Vector2( 128, 32 )
-scale = Vector2( 0.5, 0.5 )
 texture = ExtResource( 1 )
 region_enabled = true
 region_rect = Rect2( 72, 4, 64, 64 )
@@ -43,7 +41,6 @@ shape = SubResource( 1 )
 
 [node name="Tile3" type="Sprite" parent="."]
 position = Vector2( 224, 32 )
-scale = Vector2( 0.5, 0.5 )
 texture = ExtResource( 1 )
 region_enabled = true
 region_rect = Rect2( 140, 4, 64, 64 )
@@ -60,7 +57,6 @@ shape = SubResource( 1 )
 
 [node name="Tile4" type="Sprite" parent="."]
 position = Vector2( 320, 32 )
-scale = Vector2( 0.5, 0.5 )
 texture = ExtResource( 1 )
 region_enabled = true
 region_rect = Rect2( 4, 72, 64, 64 )
@@ -77,7 +73,6 @@ shape = SubResource( 1 )
 
 [node name="Tile5" type="Sprite" parent="."]
 position = Vector2( 416, 32 )
-scale = Vector2( 0.5, 0.5 )
 texture = ExtResource( 1 )
 region_enabled = true
 region_rect = Rect2( 72, 72, 64, 64 )
@@ -94,7 +89,6 @@ shape = SubResource( 1 )
 
 [node name="Tile6" type="Sprite" parent="."]
 position = Vector2( 512, 32 )
-scale = Vector2( 0.5, 0.5 )
 texture = ExtResource( 1 )
 region_enabled = true
 region_rect = Rect2( 140, 72, 64, 64 )
@@ -111,7 +105,6 @@ shape = SubResource( 1 )
 
 [node name="Tile7" type="Sprite" parent="."]
 position = Vector2( 608, 32 )
-scale = Vector2( 0.5, 0.5 )
 texture = ExtResource( 1 )
 region_enabled = true
 region_rect = Rect2( 4, 140, 64, 64 )
@@ -128,7 +121,6 @@ shape = SubResource( 1 )
 
 [node name="Tile8" type="Sprite" parent="."]
 position = Vector2( 704, 32 )
-scale = Vector2( 0.5, 0.5 )
 texture = ExtResource( 1 )
 region_enabled = true
 region_rect = Rect2( 72, 140, 64, 64 )
@@ -145,7 +137,6 @@ shape = SubResource( 1 )
 
 [node name="Tile9" type="Sprite" parent="."]
 position = Vector2( 800, 32 )
-scale = Vector2( 0.5, 0.5 )
 texture = ExtResource( 1 )
 region_enabled = true
 region_rect = Rect2( 140, 140, 64, 64 )
@@ -162,7 +153,6 @@ shape = SubResource( 1 )
 
 [node name="Tile10" type="Sprite" parent="."]
 position = Vector2( 32, 128 )
-scale = Vector2( 0.5, 0.5 )
 texture = ExtResource( 1 )
 region_enabled = true
 region_rect = Rect2( 208, 4, 64, 64 )
@@ -179,7 +169,6 @@ shape = SubResource( 1 )
 
 [node name="Tile11" type="Sprite" parent="."]
 position = Vector2( 128, 128 )
-scale = Vector2( 0.5, 0.5 )
 texture = ExtResource( 1 )
 region_enabled = true
 region_rect = Rect2( 208, 72, 64, 64 )
@@ -196,7 +185,6 @@ shape = SubResource( 1 )
 
 [node name="Tile12" type="Sprite" parent="."]
 position = Vector2( 224, 128 )
-scale = Vector2( 0.5, 0.5 )
 texture = ExtResource( 1 )
 region_enabled = true
 region_rect = Rect2( 208, 140, 64, 64 )
@@ -213,7 +201,6 @@ shape = SubResource( 1 )
 
 [node name="Tile13" type="Sprite" parent="."]
 position = Vector2( 320, 128 )
-scale = Vector2( 0.5, 0.5 )
 texture = ExtResource( 1 )
 region_enabled = true
 region_rect = Rect2( 276, 4, 64, 64 )
@@ -230,7 +217,6 @@ shape = SubResource( 1 )
 
 [node name="Tile14" type="Sprite" parent="."]
 position = Vector2( 416, 128 )
-scale = Vector2( 0.5, 0.5 )
 texture = ExtResource( 1 )
 region_enabled = true
 region_rect = Rect2( 344, 4, 64, 64 )
@@ -247,7 +233,6 @@ shape = SubResource( 1 )
 
 [node name="Tile15" type="Sprite" parent="."]
 position = Vector2( 512, 128 )
-scale = Vector2( 0.5, 0.5 )
 texture = ExtResource( 1 )
 region_enabled = true
 region_rect = Rect2( 412, 4, 64, 64 )
@@ -264,7 +249,6 @@ shape = SubResource( 1 )
 
 [node name="Tile16" type="Sprite" parent="."]
 position = Vector2( 608, 128 )
-scale = Vector2( 0.5, 0.5 )
 texture = ExtResource( 1 )
 region_enabled = true
 region_rect = Rect2( 276, 72, 64, 64 )
@@ -281,7 +265,6 @@ shape = SubResource( 1 )
 
 [node name="Tile17" type="Sprite" parent="."]
 position = Vector2( 704, 128 )
-scale = Vector2( 0.5, 0.5 )
 texture = ExtResource( 1 )
 region_enabled = true
 region_rect = Rect2( 344, 72, 64, 64 )
@@ -298,7 +281,6 @@ shape = SubResource( 1 )
 
 [node name="Tile18" type="Sprite" parent="."]
 position = Vector2( 800, 128 )
-scale = Vector2( 0.5, 0.5 )
 texture = ExtResource( 1 )
 region_enabled = true
 region_rect = Rect2( 412, 72, 64, 64 )
@@ -315,7 +297,6 @@ shape = SubResource( 1 )
 
 [node name="Tile19" type="Sprite" parent="."]
 position = Vector2( 32, 224 )
-scale = Vector2( 0.5, 0.5 )
 texture = ExtResource( 1 )
 region_enabled = true
 region_rect = Rect2( 276, 140, 64, 64 )
@@ -332,7 +313,6 @@ shape = SubResource( 1 )
 
 [node name="Tile20" type="Sprite" parent="."]
 position = Vector2( 128, 224 )
-scale = Vector2( 0.5, 0.5 )
 texture = ExtResource( 1 )
 region_enabled = true
 region_rect = Rect2( 344, 140, 64, 64 )
@@ -349,7 +329,6 @@ shape = SubResource( 1 )
 
 [node name="Tile21" type="Sprite" parent="."]
 position = Vector2( 224, 224 )
-scale = Vector2( 0.5, 0.5 )
 texture = ExtResource( 1 )
 region_enabled = true
 region_rect = Rect2( 412, 140, 64, 64 )
@@ -366,7 +345,6 @@ shape = SubResource( 1 )
 
 [node name="Tile22" type="Sprite" parent="."]
 position = Vector2( 320, 224 )
-scale = Vector2( 0.5, 0.5 )
 texture = ExtResource( 1 )
 region_enabled = true
 region_rect = Rect2( 480, 4, 64, 64 )
@@ -383,7 +361,6 @@ shape = SubResource( 1 )
 
 [node name="Tile23" type="Sprite" parent="."]
 position = Vector2( 416, 224 )
-scale = Vector2( 0.5, 0.5 )
 texture = ExtResource( 1 )
 region_enabled = true
 region_rect = Rect2( 480, 72, 64, 64 )
@@ -400,7 +377,6 @@ shape = SubResource( 1 )
 
 [node name="Tile24" type="Sprite" parent="."]
 position = Vector2( 512, 224 )
-scale = Vector2( 0.5, 0.5 )
 texture = ExtResource( 1 )
 region_enabled = true
 region_rect = Rect2( 480, 140, 64, 64 )
@@ -417,7 +393,6 @@ shape = SubResource( 1 )
 
 [node name="Tile25" type="Sprite" parent="."]
 position = Vector2( 608, 224 )
-scale = Vector2( 0.5, 0.5 )
 texture = ExtResource( 1 )
 region_enabled = true
 region_rect = Rect2( 548, 4, 64, 64 )
@@ -434,7 +409,6 @@ shape = SubResource( 1 )
 
 [node name="Tile26" type="Sprite" parent="."]
 position = Vector2( 704, 224 )
-scale = Vector2( 0.5, 0.5 )
 texture = ExtResource( 1 )
 region_enabled = true
 region_rect = Rect2( 616, 4, 64, 64 )
@@ -451,7 +425,6 @@ shape = SubResource( 1 )
 
 [node name="Tile27" type="Sprite" parent="."]
 position = Vector2( 800, 224 )
-scale = Vector2( 0.5, 0.5 )
 texture = ExtResource( 1 )
 region_enabled = true
 region_rect = Rect2( 684, 4, 64, 64 )
@@ -468,7 +441,6 @@ shape = SubResource( 1 )
 
 [node name="Tile28" type="Sprite" parent="."]
 position = Vector2( 32, 320 )
-scale = Vector2( 0.5, 0.5 )
 texture = ExtResource( 1 )
 region_enabled = true
 region_rect = Rect2( 752, 4, 64, 64 )
@@ -485,7 +457,6 @@ shape = SubResource( 1 )
 
 [node name="Tile29" type="Sprite" parent="."]
 position = Vector2( 128, 320 )
-scale = Vector2( 0.5, 0.5 )
 texture = ExtResource( 1 )
 region_enabled = true
 region_rect = Rect2( 684, 72, 64, 64 )
@@ -502,7 +473,6 @@ shape = SubResource( 1 )
 
 [node name="Tile30" type="Sprite" parent="."]
 position = Vector2( 224, 320 )
-scale = Vector2( 0.5, 0.5 )
 texture = ExtResource( 1 )
 region_enabled = true
 region_rect = Rect2( 752, 72, 64, 64 )
@@ -519,7 +489,6 @@ shape = SubResource( 1 )
 
 [node name="Tile31" type="Sprite" parent="."]
 position = Vector2( 320, 320 )
-scale = Vector2( 0.5, 0.5 )
 texture = ExtResource( 1 )
 region_enabled = true
 region_rect = Rect2( 548, 140, 64, 64 )
@@ -536,7 +505,6 @@ shape = SubResource( 1 )
 
 [node name="Tile32" type="Sprite" parent="."]
 position = Vector2( 416, 320 )
-scale = Vector2( 0.5, 0.5 )
 texture = ExtResource( 1 )
 region_enabled = true
 region_rect = Rect2( 616, 140, 64, 64 )
@@ -553,7 +521,6 @@ shape = SubResource( 1 )
 
 [node name="Tile33" type="Sprite" parent="."]
 position = Vector2( 512, 320 )
-scale = Vector2( 0.5, 0.5 )
 texture = ExtResource( 1 )
 region_enabled = true
 region_rect = Rect2( 684, 140, 64, 64 )
@@ -570,7 +537,6 @@ shape = SubResource( 1 )
 
 [node name="Tile34" type="Sprite" parent="."]
 position = Vector2( 608, 320 )
-scale = Vector2( 0.5, 0.5 )
 texture = ExtResource( 1 )
 region_enabled = true
 region_rect = Rect2( 752, 140, 64, 64 )
@@ -587,7 +553,6 @@ shape = SubResource( 1 )
 
 [node name="Tile35" type="Sprite" parent="."]
 position = Vector2( 704, 320 )
-scale = Vector2( 0.5, 0.5 )
 texture = ExtResource( 1 )
 region_enabled = true
 region_rect = Rect2( 4, 208, 64, 64 )
@@ -604,7 +569,6 @@ shape = SubResource( 1 )
 
 [node name="Tile36" type="Sprite" parent="."]
 position = Vector2( 800, 320 )
-scale = Vector2( 0.5, 0.5 )
 texture = ExtResource( 1 )
 region_enabled = true
 region_rect = Rect2( 72, 208, 64, 64 )
@@ -621,7 +585,6 @@ shape = SubResource( 1 )
 
 [node name="Tile37" type="Sprite" parent="."]
 position = Vector2( 32, 416 )
-scale = Vector2( 0.5, 0.5 )
 texture = ExtResource( 1 )
 region_enabled = true
 region_rect = Rect2( 140, 208, 64, 64 )
@@ -638,7 +601,6 @@ shape = SubResource( 1 )
 
 [node name="Tile38" type="Sprite" parent="."]
 position = Vector2( 128, 416 )
-scale = Vector2( 0.5, 0.5 )
 texture = ExtResource( 1 )
 region_enabled = true
 region_rect = Rect2( 208, 208, 64, 64 )
@@ -655,7 +617,6 @@ shape = SubResource( 1 )
 
 [node name="Tile39" type="Sprite" parent="."]
 position = Vector2( 224, 416 )
-scale = Vector2( 0.5, 0.5 )
 texture = ExtResource( 1 )
 region_enabled = true
 region_rect = Rect2( 276, 208, 64, 64 )
@@ -672,7 +633,6 @@ shape = SubResource( 1 )
 
 [node name="Tile40" type="Sprite" parent="."]
 position = Vector2( 320, 416 )
-scale = Vector2( 0.5, 0.5 )
 texture = ExtResource( 1 )
 region_enabled = true
 region_rect = Rect2( 344, 208, 64, 64 )
@@ -689,7 +649,6 @@ shape = SubResource( 1 )
 
 [node name="Tile41" type="Sprite" parent="."]
 position = Vector2( 416, 416 )
-scale = Vector2( 0.5, 0.5 )
 texture = ExtResource( 1 )
 region_enabled = true
 region_rect = Rect2( 412, 208, 64, 64 )
@@ -706,7 +665,6 @@ shape = SubResource( 1 )
 
 [node name="Tile42" type="Sprite" parent="."]
 position = Vector2( 512, 416 )
-scale = Vector2( 0.5, 0.5 )
 texture = ExtResource( 1 )
 region_enabled = true
 region_rect = Rect2( 548, 208, 64, 64 )
@@ -723,7 +681,6 @@ shape = SubResource( 1 )
 
 [node name="Tile43" type="Sprite" parent="."]
 position = Vector2( 608, 416 )
-scale = Vector2( 0.5, 0.5 )
 texture = ExtResource( 1 )
 region_enabled = true
 region_rect = Rect2( 616, 208, 64, 64 )
@@ -740,7 +697,6 @@ shape = SubResource( 1 )
 
 [node name="Tile44" type="Sprite" parent="."]
 position = Vector2( 704, 416 )
-scale = Vector2( 0.5, 0.5 )
 texture = ExtResource( 1 )
 region_enabled = true
 region_rect = Rect2( 684, 208, 64, 64 )
@@ -757,7 +713,6 @@ shape = SubResource( 1 )
 
 [node name="Tile45" type="Sprite" parent="."]
 position = Vector2( 800, 416 )
-scale = Vector2( 0.5, 0.5 )
 texture = ExtResource( 1 )
 region_enabled = true
 region_rect = Rect2( 752, 208, 64, 64 )
@@ -774,7 +729,6 @@ shape = SubResource( 1 )
 
 [node name="Tile46" type="Sprite" parent="."]
 position = Vector2( 32, 520 )
-scale = Vector2( 0.5, 0.5 )
 texture = ExtResource( 1 )
 region_enabled = true
 region_rect = Rect2( 4, 412, 64, 64 )
@@ -791,7 +745,6 @@ shape = SubResource( 1 )
 
 [node name="Tile47" type="Sprite" parent="."]
 position = Vector2( 32, 520 )
-scale = Vector2( 0.5, 0.5 )
 texture = ExtResource( 1 )
 region_enabled = true
 region_rect = Rect2( 4, 276, 64, 64 )
@@ -808,7 +761,6 @@ shape = SubResource( 1 )
 
 [node name="Tile48" type="Sprite" parent="."]
 position = Vector2( 128, 520 )
-scale = Vector2( 0.5, 0.5 )
 texture = ExtResource( 1 )
 region_enabled = true
 region_rect = Rect2( 72, 276, 64, 64 )
@@ -825,7 +777,6 @@ shape = SubResource( 1 )
 
 [node name="Tile49" type="Sprite" parent="."]
 position = Vector2( 224, 520 )
-scale = Vector2( 0.5, 0.5 )
 texture = ExtResource( 1 )
 region_enabled = true
 region_rect = Rect2( 140, 276, 64, 64 )
@@ -842,7 +793,6 @@ shape = SubResource( 1 )
 
 [node name="Tile50" type="Sprite" parent="."]
 position = Vector2( 320, 520 )
-scale = Vector2( 0.5, 0.5 )
 texture = ExtResource( 1 )
 region_enabled = true
 region_rect = Rect2( 4, 344, 64, 64 )
@@ -859,7 +809,6 @@ shape = SubResource( 1 )
 
 [node name="Tile51" type="Sprite" parent="."]
 position = Vector2( 416, 520 )
-scale = Vector2( 0.5, 0.5 )
 texture = ExtResource( 1 )
 region_enabled = true
 region_rect = Rect2( 140, 344, 64, 64 )
@@ -876,7 +825,6 @@ shape = SubResource( 1 )
 
 [node name="Tile52" type="Sprite" parent="."]
 position = Vector2( 512, 520 )
-scale = Vector2( 0.5, 0.5 )
 texture = ExtResource( 1 )
 region_enabled = true
 region_rect = Rect2( 4, 412, 64, 64 )
@@ -893,7 +841,6 @@ shape = SubResource( 1 )
 
 [node name="Tile53" type="Sprite" parent="."]
 position = Vector2( 608, 520 )
-scale = Vector2( 0.5, 0.5 )
 texture = ExtResource( 1 )
 region_enabled = true
 region_rect = Rect2( 72, 412, 64, 64 )
@@ -908,9 +855,280 @@ collision_mask = 0
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Tile53/StaticBody2D"]
 shape = SubResource( 1 )
 
+[node name="Tile55" type="Sprite" parent="."]
+position = Vector2( 704, 520 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 140, 412, 64, 64 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Tile55"]
+collision_layer = 4
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Tile55/StaticBody2D"]
+shape = SubResource( 1 )
+
+[node name="Tile56" type="Sprite" parent="."]
+position = Vector2( 800, 520 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 4, 480, 64, 64 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Tile56"]
+collision_layer = 4
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Tile56/StaticBody2D"]
+shape = SubResource( 1 )
+
+[node name="Tile57" type="Sprite" parent="."]
+position = Vector2( 32, 608 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 72, 480, 64, 64 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Tile57"]
+collision_layer = 4
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Tile57/StaticBody2D"]
+shape = SubResource( 1 )
+
+[node name="Tile58" type="Sprite" parent="."]
+position = Vector2( 128, 608 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 140, 480, 64, 64 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Tile58"]
+collision_layer = 4
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Tile58/StaticBody2D"]
+shape = SubResource( 1 )
+
+[node name="Tile59" type="Sprite" parent="."]
+position = Vector2( 224, 608 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 208, 480, 64, 64 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Tile59"]
+collision_layer = 4
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Tile59/StaticBody2D"]
+shape = SubResource( 1 )
+
+[node name="Tile60" type="Sprite" parent="."]
+position = Vector2( 320, 608 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 548, 276, 64, 64 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Tile60"]
+collision_layer = 4
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Tile60/StaticBody2D"]
+shape = SubResource( 1 )
+
+[node name="Tile61" type="Sprite" parent="."]
+position = Vector2( 416, 608 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 616, 276, 64, 64 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Tile61"]
+collision_layer = 4
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Tile61/StaticBody2D"]
+shape = SubResource( 1 )
+
+[node name="Tile62" type="Sprite" parent="."]
+position = Vector2( 512, 608 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 548, 344, 64, 64 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Tile62"]
+collision_layer = 4
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Tile62/StaticBody2D"]
+shape = SubResource( 1 )
+
+[node name="Tile63" type="Sprite" parent="."]
+position = Vector2( 608, 608 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 616, 344, 64, 64 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Tile63"]
+collision_layer = 4
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Tile63/StaticBody2D"]
+shape = SubResource( 1 )
+
+[node name="Tile64" type="Sprite" parent="."]
+position = Vector2( 704, 608 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 684, 276, 64, 64 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Tile64"]
+collision_layer = 4
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Tile64/StaticBody2D"]
+shape = SubResource( 1 )
+
+[node name="Tile65" type="Sprite" parent="."]
+position = Vector2( 800, 608 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 752, 276, 64, 64 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Tile65"]
+collision_layer = 4
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Tile65/StaticBody2D"]
+shape = SubResource( 1 )
+
+[node name="Tile66" type="Sprite" parent="."]
+position = Vector2( 32, 704 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 684, 344, 64, 64 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Tile66"]
+collision_layer = 4
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Tile66/StaticBody2D"]
+shape = SubResource( 1 )
+
+[node name="Tile67" type="Sprite" parent="."]
+position = Vector2( 128, 704 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 752, 344, 64, 64 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Tile67"]
+collision_layer = 4
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Tile67/StaticBody2D"]
+shape = SubResource( 1 )
+
+[node name="Tile68" type="Sprite" parent="."]
+position = Vector2( 224, 704 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 684, 412, 64, 64 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Tile68"]
+collision_layer = 4
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Tile68/StaticBody2D"]
+shape = SubResource( 1 )
+
+[node name="Tile69" type="Sprite" parent="."]
+position = Vector2( 320, 704 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 752, 412, 64, 64 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Tile69"]
+collision_layer = 4
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Tile69/StaticBody2D"]
+shape = SubResource( 1 )
+
+[node name="Tile70" type="Sprite" parent="."]
+position = Vector2( 416, 704 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 684, 480, 64, 64 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Tile70"]
+collision_layer = 4
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Tile70/StaticBody2D"]
+shape = SubResource( 1 )
+
+[node name="Tile71" type="Sprite" parent="."]
+position = Vector2( 512, 704 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 752, 480, 64, 64 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Tile71"]
+collision_layer = 4
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Tile71/StaticBody2D"]
+shape = SubResource( 1 )
+
 [node name="Tile54" type="Sprite" parent="."]
 position = Vector2( 960, 352 )
-scale = Vector2( 0.5, 0.5 )
 texture = ExtResource( 1 )
 region_enabled = true
 region_rect = Rect2( 480, 208, 64, 64 )
