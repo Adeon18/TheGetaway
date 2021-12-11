@@ -68,11 +68,11 @@ func make_turn():
 		else:
 			curr_patrool_target = !curr_patrool_target
 			next_pos_vec = Vector2.ZERO
-			#print(curr_patrool_target)
 	
 	global_position += next_pos_vec * step
 
-	#PlayerDetector.rotation_degrees = turn_dict[next_pos_vec]
+	if next_pos_vec != Vector2.ZERO:
+		PlayerDetector.rotation_degrees = turn_dict[next_pos_vec]
 	prev_pos_vec = next_pos_vec
 	PatroolPointA.global_position -= prev_pos_vec * step
 	PatroolPointB.global_position -= prev_pos_vec * step
@@ -84,4 +84,4 @@ func get_class(): return "Enemy"
 
 func _on_PlayerDetector_body_entered(body):
 	if body.name == "Player":
-		triggered = false
+		triggered = true
