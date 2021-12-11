@@ -10,7 +10,7 @@ var level_changed: bool = false
 
 var door_look: Dictionary = {
 	"activated": "res://art/Doors/opened_door.png",
-	"deactivated": "res://art/Doors/closed_door.png"
+	"deactivated": "res://art/Doors/closed_door_border.png"
 }
 
 func _ready():

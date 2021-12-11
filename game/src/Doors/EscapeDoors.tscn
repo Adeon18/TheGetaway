@@ -10,7 +10,7 @@ extents = Vector2( 32, 32 )
 extents = Vector2( 16, 16 )
 
 [node name="EscapeDoors" type="Area2D"]
-z_index = 1
+z_index = 6
 collision_layer = 4
 script = ExtResource( 2 )
 activated = false
