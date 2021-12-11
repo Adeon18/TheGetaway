@@ -12,6 +12,9 @@ var rnd_dir_choice: int
 # FALSE : PointA
 # TRUE : PointB
 var curr_patrool_target: bool = false
+export var wait_in_patrool_points: int = 2
+var curr_waited: int = 0
+var is_waiting: bool = false
 
 var directions: Array = [Vector2.UP, Vector2.DOWN, Vector2.LEFT, Vector2.RIGHT]
 
@@ -60,7 +63,6 @@ func make_turn():
 		# if dest is point B
 		else:
 			dest_pos_tile = Tilemap.world_to_map(PatroolPointB.global_position)
-		print(dest_pos_tile)
 		# find path
 		path = Tilemap._get_path(cur_pos_tile, dest_pos_tile)
 		if path:
@@ -68,6 +70,11 @@ func make_turn():
 		else:
 			curr_patrool_target = !curr_patrool_target
 			next_pos_vec = Vector2.ZERO
+			is_waiting = true
+	
+	if is_waiting: 
+		next_pos_vec = Vector2.ZERO
+		curr_waited += 1
 	
 	global_position += next_pos_vec * step
 
@@ -76,6 +83,9 @@ func make_turn():
 	prev_pos_vec = next_pos_vec
 	PatroolPointA.global_position -= prev_pos_vec * step
 	PatroolPointB.global_position -= prev_pos_vec * step
+	if curr_waited >= wait_in_patrool_points:
+		is_waiting = false
+		curr_waited = 0
 
 
 
