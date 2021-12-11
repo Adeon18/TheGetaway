@@ -36,6 +36,10 @@ config/name="Hoydalka Gaem"
 run/main_scene="res://src/MainTestScene/Main.tscn"
 config/icon="res://icon.png"
 
+[autoload]
+
+SceneTransition="*res://src/Doors/SceneTransition.tscn"
+
 [display]
 
 window/size/width=1920
