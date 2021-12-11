@@ -7,8 +7,11 @@ var cur_pos_tile
 var dest_pos_tile
 var next_pos_vec: Vector2
 var prev_pos_vec: Vector2 = Vector2(0, 1)
-var possible_next_poss: Array
 var rnd_dir_choice: int
+
+# FALSE : PointA
+# TRUE : PointB
+var curr_patrool_target: bool = false
 
 var directions: Array = [Vector2.UP, Vector2.DOWN, Vector2.LEFT, Vector2.RIGHT]
 
@@ -28,13 +31,14 @@ var turn_dict = {
 onready var Tilemap: TileMap = get_node("../../TileMap")
 onready var Player: Player = get_parent().get_node("Player")
 onready var PlayerDetector = get_node("PlayerDetector")
-
+onready var PatroolPointA = get_node("PatroolPointA")
+onready var PatroolPointB = get_node("PatroolPointB")
 
 signal finish_turn
 
 
 func _ready():
-	RndGen.randomize()
+	pass
 
 
 func make_turn():
@@ -44,19 +48,34 @@ func make_turn():
 	cur_pos_tile = Tilemap.world_to_map(global_position)
 	
 	if triggered:
-		
+
 		dest_pos_tile = Tilemap.world_to_map(Player.global_position)
 		path = Tilemap._get_path(cur_pos_tile, dest_pos_tile)
-		
 		if path:
 			next_pos_vec = path[0] - cur_pos_tile
 	else:
-		pass
-				
+		# if dest is point A
+		if (curr_patrool_target):
+			dest_pos_tile = Tilemap.world_to_map(PatroolPointA.global_position)
+		# if dest is point B
+		else:
+			dest_pos_tile = Tilemap.world_to_map(PatroolPointB.global_position)
+		print(dest_pos_tile)
+		# find path
+		path = Tilemap._get_path(cur_pos_tile, dest_pos_tile)
+		if path:
+			next_pos_vec = path[0] - cur_pos_tile
+		else:
+			curr_patrool_target = !curr_patrool_target
+			next_pos_vec = Vector2.ZERO
+	
 	global_position += next_pos_vec * step
-#	print(turn_dict[next_pos_vec])
-	PlayerDetector.rotation_degrees = turn_dict[next_pos_vec]
+
+	if next_pos_vec != Vector2.ZERO:
+		PlayerDetector.rotation_degrees = turn_dict[next_pos_vec]
 	prev_pos_vec = next_pos_vec
+	PatroolPointA.global_position -= prev_pos_vec * step
+	PatroolPointB.global_position -= prev_pos_vec * step
 
 
 
