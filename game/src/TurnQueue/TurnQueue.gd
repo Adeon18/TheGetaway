@@ -17,8 +17,6 @@ func play_turn():
 	else:
 		active_char.make_turn()
 	var new_index : int = (active_char.get_index() + 1) % get_child_count()
-	print(new_index)
-	print(active_char)
 	active_char = get_child(new_index)
 	play_turn()
 
