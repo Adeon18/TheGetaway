@@ -1,6 +1,6 @@
 extends KinematicBody2D
 
-var step = 16
+var step = 32
 var moveVector = Vector2()
 
 signal finish_turn

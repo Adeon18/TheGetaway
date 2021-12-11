@@ -14,6 +14,7 @@ signal finish_turn
 
 func _physics_process(delta):
 	if canMove:
+		moveVector = Vector2()
 		process_movement()
 		if moveVector != Vector2.ZERO:
 			emit_signal("finish_turn")
