@@ -27,10 +27,6 @@ rotation = 1.5708
 position = Vector2( 0, 8 )
 polygon = PoolVector2Array( 8, -8, 192, -320, -192, -320, -8, -8 )
 
-[node name="RayCast2D" type="RayCast2D" parent="PlayerDetector"]
-cast_to = Vector2( 0, 300 )
-collision_mask = 13
-
 [node name="PatroolPointA" type="Position2D" parent="."]
 
 [node name="PatroolPointB" type="Position2D" parent="."]
