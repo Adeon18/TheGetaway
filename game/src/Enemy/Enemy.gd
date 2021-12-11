@@ -3,6 +3,8 @@ extends KinematicBody2D
 var step = 64
 
 
+const WALL_LAYER = 4
+
 var cur_pos_tile
 var dest_pos_tile
 var next_pos_vec: Vector2
@@ -36,6 +38,7 @@ onready var Player: Player = get_parent().get_node("Player")
 onready var PlayerDetector = get_node("PlayerDetector")
 onready var PatroolPointA = get_node("PatroolPointA")
 onready var PatroolPointB = get_node("PatroolPointB")
+onready var Raycast = get_node("PlayerDetector/RayCast2D")
 
 signal finish_turn
 
@@ -94,4 +97,10 @@ func get_class(): return "Enemy"
 
 func _on_PlayerDetector_body_entered(body):
 	if body.name == "Player":
-		triggered = true
+		var directState = get_world_2d().direct_space_state
+		var targetPosition = Player.global_position
+		var offset = global_position
+		var collision = directState.intersect_ray(offset, targetPosition, [self])
+
+		if collision["collider"].get_collision_layer() != WALL_LAYER:
+			triggered = true

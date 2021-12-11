@@ -21,12 +21,15 @@ position = Vector2( -1.19209e-06, -4.76837e-07 )
 texture = ExtResource( 2 )
 
 [node name="PlayerDetector" type="Area2D" parent="."]
-visible = false
 rotation = 1.5708
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="PlayerDetector"]
 position = Vector2( 0, 8 )
 polygon = PoolVector2Array( 8, -8, 192, -320, -192, -320, -8, -8 )
+
+[node name="RayCast2D" type="RayCast2D" parent="PlayerDetector"]
+cast_to = Vector2( 0, 300 )
+collision_mask = 13
 
 [node name="PatroolPointA" type="Position2D" parent="."]
 
