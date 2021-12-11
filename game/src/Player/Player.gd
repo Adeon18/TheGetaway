@@ -22,7 +22,6 @@ func _physics_process(delta):
 			targetPosition = global_position + moveVector*step
 			var playerOffset = global_position + moveVector*step/2
 			var collision = directState.intersect_ray(playerOffset, targetPosition)
-			print(collision)
 			# Check if target position is not wall
 			if collision["collider"].get_collision_layer() != WALL_LAYER:
 				moveVector = Vector2()
