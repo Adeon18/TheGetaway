@@ -4,7 +4,7 @@
 [ext_resource path="res://icon.png" type="Texture" id=2]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 32, 32 )
+extents = Vector2( 16, 16 )
 
 [node name="Enemy" type="KinematicBody2D"]
 z_index = 9
@@ -21,10 +21,15 @@ position = Vector2( -1.19209e-06, -4.76837e-07 )
 texture = ExtResource( 2 )
 
 [node name="PlayerDetector" type="Area2D" parent="."]
+visible = false
 rotation = 1.5708
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="PlayerDetector"]
 position = Vector2( 0, 8 )
 polygon = PoolVector2Array( 8, -8, 192, -320, -192, -320, -8, -8 )
+
+[node name="PatroolPointA" type="Position2D" parent="."]
+
+[node name="PatroolPointB" type="Position2D" parent="."]
 
 [connection signal="body_entered" from="PlayerDetector" to="." method="_on_PlayerDetector_body_entered"]
