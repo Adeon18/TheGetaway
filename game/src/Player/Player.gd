@@ -1,5 +1,7 @@
 extends KinematicBody2D
 
+const WALL_LAYER = 4
+
 var step = 32
 var moveVector = Vector2()
 var canMove = true
@@ -10,9 +12,16 @@ var lerpSpeed = 30
 func _physics_process(delta):
 	if canMove:
 		process_movement()
-		targetPosition = global_position + moveVector*step
-		moveVector = Vector2()
-		canMove = false
+		if moveVector != Vector2.ZERO:
+			var directState = get_world_2d().direct_space_state
+			targetPosition = global_position + moveVector*step
+			var playerOffset = global_position + moveVector*16
+			var collision = directState.intersect_ray(playerOffset, targetPosition)
+			
+			# Check if target position is not wall
+			if collision["collider"].get_collision_layer() != WALL_LAYER:
+				moveVector = Vector2()
+				canMove = false
 	
 	# Interpolate position of player for smooth movement
 	if not canMove:
