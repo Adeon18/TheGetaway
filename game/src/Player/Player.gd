@@ -1,6 +1,6 @@
 extends KinematicBody2D
 
-var step = 8
+var step = 32
 
 func _physics_process(delta):
 	var moveVector = Vector2()
