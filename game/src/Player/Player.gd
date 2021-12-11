@@ -1,13 +1,14 @@
 extends KinematicBody2D
 
+class_name Player
+
+const WALL_LAYER = 4
 var step = 32
 var moveVector = Vector2()
 var canMove = true
 
 var targetPosition = Vector2()
 var lerpSpeed = 30
-
-class_name Player
 
 signal finish_turn
 
@@ -16,21 +17,23 @@ func _physics_process(delta):
 		process_movement()
 		if moveVector != Vector2.ZERO:
 			emit_signal("finish_turn")
+			var directState = get_world_2d().direct_space_state
+			targetPosition = global_position + moveVector*step
+			var playerOffset = global_position + moveVector*16
+			var collision = directState.intersect_ray(playerOffset, targetPosition)
+			
+			# Check if target position is not wall
+			if collision["collider"].get_collision_layer() != WALL_LAYER:
+				moveVector = Vector2()
+				canMove = false
 
-		targetPosition = global_position + moveVector*step
-		moveVector = Vector2()
-		canMove = false
-		
-	
 	# Interpolate position of player for smooth movement
 	if not canMove:
 		if (abs(global_position.x - targetPosition.x) > 0.01) or (abs(global_position.y - targetPosition.y) > 0.01):
 			global_position = lerp(global_position, targetPosition, lerpSpeed*delta)
-			
 		else:
 			global_position = targetPosition
 			canMove = true
-	
 
 
 func process_movement():
@@ -45,5 +48,5 @@ func process_movement():
 
 func make_turn():
 	pass
-
+# OLEXIY GAVNOCODE
 func get_class(): return "Player"
