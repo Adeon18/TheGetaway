@@ -3,7 +3,7 @@ extends KinematicBody2D
 class_name Player
 
 const WALL_LAYER = 4
-var step = 32
+var step = 64
 var moveVector = Vector2()
 var canMove = true
 

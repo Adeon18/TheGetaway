@@ -1,26 +1,27 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://src/TileMap/TileMap.tres" type="TileSet" id=1]
 [ext_resource path="res://src/Player/Player.tscn" type="PackedScene" id=2]
 [ext_resource path="res://src/Enemy/Enemy.tscn" type="PackedScene" id=3]
 [ext_resource path="res://src/TurnQueue/TurnQueue.tscn" type="PackedScene" id=4]
+[ext_resource path="res://src/Enemy/AStar_Path.gd" type="Script" id=5]
 
 [node name="Main" type="Node2D"]
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = ExtResource( 1 )
+collision_layer = 4
+format = 1
+tile_data = PoolIntArray( 0, 53, 0, 1, 53, 0, 2, 53, 0, 3, 53, 0, 4, 0, 0, 5, 2, 0, 6, 53, 0, 7, 53, 0, 8, 53, 0, 9, 53, 0, 10, 53, 0, 11, 53, 0, 12, 53, 0, 13, 53, 0, 14, 53, 0, 15, 53, 0, 16, 53, 0, 17, 53, 0, 18, 53, 0, 65536, 53, 0, 65537, 53, 0, 65538, 53, 0, 65539, 53, 0, 65540, 6, 0, 65541, 8, 0, 65542, 53, 0, 65543, 53, 0, 65544, 53, 0, 65545, 53, 0, 65546, 53, 0, 65547, 53, 0, 65548, 53, 0, 65549, 53, 0, 65550, 53, 0, 65551, 53, 0, 65552, 53, 0, 65553, 53, 0, 65554, 53, 0, 131072, 53, 0, 131073, 53, 0, 131074, 53, 0, 131075, 53, 0, 131076, 53, 0, 131077, 53, 0, 131078, 53, 0, 131079, 53, 0, 131080, 53, 0, 131081, 53, 0, 131082, 53, 0, 131083, 53, 0, 131084, 53, 0, 131085, 53, 0, 131086, 53, 0, 131087, 53, 0, 131088, 53, 0, 131089, 53, 0, 131090, 53, 0, 196608, 53, 0, 196609, 53, 0, 196610, 53, 0, 196611, 53, 0, 196612, 0, 0, 196613, 2, 0, 196614, 53, 0, 196615, 53, 0, 196616, 53, 0, 196617, 53, 0, 196618, 53, 0, 196619, 53, 0, 196620, 53, 0, 196621, 53, 0, 196622, 53, 0, 196623, 53, 0, 196624, 53, 0, 196625, 53, 0, 196626, 53, 0, 262144, 53, 0, 262145, 53, 0, 262146, 53, 0, 262147, 53, 0, 262148, 2, 0, 262149, 2, 0, 262150, 53, 0, 262151, 53, 0, 262152, 53, 0, 262153, 53, 0, 262154, 53, 0, 262155, 53, 0, 262156, 53, 0, 262157, 53, 0, 262158, 53, 0, 262159, 53, 0, 262160, 53, 0, 262161, 53, 0, 262162, 53, 0, 327680, 53, 0, 327681, 53, 0, 327682, 53, 0, 327683, 53, 0, 327684, 2, 0, 327685, 2, 0, 327686, 53, 0, 327687, 53, 0, 327688, 53, 0, 327689, 53, 0, 327690, 53, 0, 327691, 53, 0, 327692, 53, 0, 327693, 53, 0, 327694, 53, 0, 327695, 53, 0, 327696, 53, 0, 327697, 53, 0, 327698, 53, 0, 393216, 53, 0, 393217, 53, 0, 393218, 53, 0, 393219, 53, 0, 393220, 2, 0, 393221, 2, 0, 393222, 53, 0, 393223, 53, 0, 393224, 53, 0, 393225, 53, 0, 393226, 53, 0, 393227, 53, 0, 393228, 53, 0, 393229, 53, 0, 393230, 53, 0, 393231, 53, 0, 393232, 53, 0, 393233, 53, 0, 393234, 53, 0 )
+script = ExtResource( 5 )
 
 [node name="TurnQueue" parent="." instance=ExtResource( 4 )]
 
 [node name="Player" parent="TurnQueue" instance=ExtResource( 2 )]
-position = Vector2( 16, 16 )
+position = Vector2( 544, 288 )
 
 [node name="Enemy" parent="TurnQueue" instance=ExtResource( 3 )]
-position = Vector2( 144, 16 )
+position = Vector2( 480, 96 )
 
 [node name="Enemy2" parent="TurnQueue" instance=ExtResource( 3 )]
-position = Vector2( 16, 48 )
-
-[node name="TileMap" type="TileMap" parent="."]
-scale = Vector2( 0.5, 0.5 )
-tile_set = ExtResource( 1 )
-collision_layer = 4
-format = 1
-tile_data = PoolIntArray( 2, 0, 0, 3, 2, 0, 65538, 6, 0, 65539, 8, 0 )
+position = Vector2( 32, 224 )

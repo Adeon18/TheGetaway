@@ -9,6 +9,11 @@
 config_version=4
 
 _global_script_classes=[ {
+"base": "TileMap",
+"class": "AStar_Path",
+"language": "GDScript",
+"path": "res://src/Enemy/AStar_Path.gd"
+}, {
 "base": "KinematicBody2D",
 "class": "Player",
 "language": "GDScript",
@@ -20,6 +25,7 @@ _global_script_classes=[ {
 "path": "res://src/TurnQueue/TurnQueue.gd"
 } ]
 _global_script_class_icons={
+"AStar_Path": "",
 "Player": "",
 "TurnQueue": ""
 }
