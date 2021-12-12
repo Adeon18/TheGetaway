@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://src/TileMap/TileMap.tres" type="TileSet" id=1]
 [ext_resource path="res://src/Player/Player.tscn" type="PackedScene" id=2]
@@ -8,8 +8,9 @@
 [ext_resource path="res://src/Doors/EscapeDoors.tscn" type="PackedScene" id=6]
 [ext_resource path="res://src/UI/PopUpWindow.tscn" type="PackedScene" id=7]
 [ext_resource path="res://src/UI/LevelData.tscn" type="PackedScene" id=8]
+[ext_resource path="res://snd/music.mp3" type="AudioStream" id=9]
 
-[node name="Main" type="Node2D"]
+[node name="Level 1" type="Node2D"]
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
@@ -52,6 +53,10 @@ position = Vector2( 64, 128 )
 [node name="EscapeDoors" parent="." instance=ExtResource( 6 )]
 position = Vector2( 1440, 96 )
 activated = true
+
+[node name="MusicPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 9 )
+volume_db = -38.0
 
 [editable path="TurnQueue/Enemy"]
 [editable path="TurnQueue/Enemy2"]
