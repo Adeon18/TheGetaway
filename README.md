@@ -7,7 +7,7 @@
 ### Overview
 **The Gateaway** is a turn-based top-down 2D game with stealth-based gameplay mechanics, written during two-days gamejam contest. The retro style of the game and its black-and-green color palette were chosen in order to fit the Matrix-inspired theme and athmosphere.
 
-The main hero of the game is being hounted by the evil agents. He should distract them using his special ability directly, or by interracting with surrounding objects. The aim is to pass the level without getting caught by the agents.
+The main hero of the game is being hounted by the evil agents. He should distract them using his special ability directly, or by interracting with surrounding objects. The aim is to pass the level without getting caught by the agents, while the world keeps breaking down more and more.
 
 <img src="https://user-images.githubusercontent.com/73172589/145733849-64a64dea-8493-4535-a0c7-0ec7551ecc39.png" width="300"> <img src="https://github.com/Adeon18/Gaem/blob/main/game/art/Tilemap/decorations/l0_sprite_2.png" width="50"> <img src="https://user-images.githubusercontent.com/73172589/145734017-696f85dc-1257-4540-8b3d-fcfdad1a408c.png" width="270"> <img src="https://github.com/Adeon18/Gaem/blob/main/game/art/Tilemap/decorations/l0_sprite_2.png" width="50"> <img src="https://user-images.githubusercontent.com/73172589/145734115-9c3b23fa-ea67-4212-8eac-2d9617995a4f.png" width="230">
 
