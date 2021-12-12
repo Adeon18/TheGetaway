@@ -1,1 +1,24 @@
-# Gaem
+# <img src="https://github.com/Adeon18/Gaem/blob/main/game/icon.png" width="30"> _THE GATEAWAY_ by Hoydalka
+
+![image](https://user-images.githubusercontent.com/73172589/145733739-e1c880cc-813f-408c-8ba4-cf8ae06e86ce.png)
+![image](https://user-images.githubusercontent.com/73172589/145733752-5dcda84b-2a6c-46a9-a02d-cbfafa6472d6.png)
+---
+
+### Overview
+**The Gateaway** is a turn-based top-down 2D game with stealth-based gameplay mechanics, written during two-days gamejam contest. The retro style of the game and its black-and-green color palette were chosen in order to fit the Matrix-inspired theme and athmosphere.
+
+The main hero of the game is being hounted by the evil agents. He should distract them using his special ability directly, or by interracting with surrounding objects. The aim is to pass the level without getting caught by the agents.
+
+<img src="https://user-images.githubusercontent.com/73172589/145733849-64a64dea-8493-4535-a0c7-0ec7551ecc39.png" width="300"> <img src="https://github.com/Adeon18/Gaem/blob/main/game/art/Tilemap/decorations/l0_sprite_2.png" width="50"> <img src="https://user-images.githubusercontent.com/73172589/145734017-696f85dc-1257-4540-8b3d-fcfdad1a408c.png" width="270"> <img src="https://github.com/Adeon18/Gaem/blob/main/game/art/Tilemap/decorations/l0_sprite_2.png" width="50"> <img src="https://user-images.githubusercontent.com/73172589/145734115-9c3b23fa-ea67-4212-8eac-2d9617995a4f.png" width="230">
+
+![image](https://user-images.githubusercontent.com/73172589/145733644-f79ee4e1-5240-4f1b-9383-c4e4134d8165.png)
+
+
+### Contributors
+#### Coders:
+* [Ostap Trush](https://github.com/Adeon18)
+* [Bohdan Ruban](https://github.com/iamthewalrus67)
+* [Olexiy Hoyev](https://github.com/alexg-lviv)
+#### 2D artists:
+* [Oleksandra Stasiuk](https://github.com/oleksadobush)
+* [Anna-Alina Bondarets](https://github.com/alorthius)
