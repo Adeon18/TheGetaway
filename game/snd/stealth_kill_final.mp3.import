@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/stealth_kill_final.mp3-ae2e953dcb285ae9a06639a26ba86026.mp3str"
+
+[deps]
+
+source_file="res://snd/stealth_kill_final.mp3"
+dest_files=[ "res://.import/stealth_kill_final.mp3-ae2e953dcb285ae9a06639a26ba86026.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

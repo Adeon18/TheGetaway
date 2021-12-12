@@ -141,7 +141,8 @@ func make_turn():
 		else:
 			Turnqueue.positions.append(Tilemap.world_to_map(global_position + next_pos_vec*step))
 			var idx = Turnqueue.positions.find(Tilemap.world_to_map(global_position))
-			Turnqueue.positions.remove(idx)
+			if idx != -1:
+				Turnqueue.positions.remove(idx)
 		
 #		global_position += next_pos_vec * step
 		
@@ -199,6 +200,8 @@ func disturb_enemy(source_gloal_position: Vector2):
 func _on_PlayerDetector_body_entered(body):
 	if body.name == "Player":
 		if look_for_player():
+			if !triggered:
+				$AlertStreamPlayer2D.play()
 			triggered = true
 			enemy_sprite.texture = enemy_alerted_texture
 

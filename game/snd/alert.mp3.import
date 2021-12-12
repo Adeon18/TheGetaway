@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/alert.mp3-0c9212de404dd27530fd565753ef183c.mp3str"
+
+[deps]
+
+source_file="res://snd/alert.mp3"
+dest_files=[ "res://.import/alert.mp3-0c9212de404dd27530fd565753ef183c.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

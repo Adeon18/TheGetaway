@@ -15,14 +15,15 @@ var door_look: Dictionary = {
 
 func _ready():
 	if activated:
-		$Sprite.texture = load(door_look["activated"])
-		$CollisionShape2D.disabled = true
+		$Sprite.texture = load(door_look["deactivated"])
+		$PlayerDetector/CollisionShape2D.disabled = false
 	else:
 		$Sprite.texture = load(door_look["deactivated"])
-		$CollisionShape2D.disabled = false
+		$PlayerDetector/CollisionShape2D.disabled = true
 
 
 func _on_PlayerDetector_body_entered(body):
 	if activated and body.name == "Player":
 		player = body
 		SceneTransition.change_scene(next_scene)
+		$AudioStreamPlayer2D.play()
