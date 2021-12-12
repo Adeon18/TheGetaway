@@ -1,10 +1,11 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://src/UI/DynamicText.gd" type="Script" id=1]
 [ext_resource path="res://art/Fonts/Pixeled.ttf" type="DynamicFontData" id=2]
 [ext_resource path="res://src/UI/PopUpWindow.gd" type="Script" id=3]
 [ext_resource path="res://art/UI/window.png" type="Texture" id=4]
 [ext_resource path="res://snd/keyboard_click1.mp3" type="AudioStream" id=5]
+[ext_resource path="res://art/Enemy/enemy.png" type="Texture" id=6]
 
 [sub_resource type="DynamicFont" id=1]
 size = 20
@@ -77,6 +78,12 @@ position = Vector2( -408, -30 )
 scale = Vector2( 0.5, 1.25 )
 script = ExtResource( 1 )
 in_window = true
+
+[node name="Enemy" type="Sprite" parent="Window/DynamicText"]
+position = Vector2( 264, 88 )
+rotation = 0.261799
+scale = Vector2( 2, 2 )
+texture = ExtResource( 6 )
 
 [node name="Label" type="Label" parent="Window/DynamicText"]
 anchor_right = 1.0

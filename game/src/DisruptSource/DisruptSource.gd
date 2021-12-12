@@ -8,7 +8,7 @@ func alert_enemies():
 	var bodies = $DisruptRadius.get_overlapping_bodies()
 	is_active = true
 	$ActiveStreamPlayer2D.play()
-	PopuPWindow.window_popup({1: "aaaaggghhhh, he is stopping is."})
+	PopuPWindow.window_popup({1: "someone triggered the laptop"})
 	for body in bodies:
 		if body.has_method("disturb_enemy"):
 			body.disturb_enemy(global_position)
