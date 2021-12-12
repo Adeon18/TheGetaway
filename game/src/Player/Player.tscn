@@ -1,7 +1,8 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://src/Player/Player.gd" type="Script" id=1]
 [ext_resource path="res://art/Player/player.png" type="Texture" id=2]
+[ext_resource path="res://art/Player/selection.png" type="Texture" id=3]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 32, 32 )
@@ -74,3 +75,9 @@ tree_root = SubResource( 4 )
 anim_player = NodePath("../AnimationPlayer")
 active = true
 parameters/TimeScale/scale = 0.9
+
+[node name="SelectionSprite" type="Sprite" parent="."]
+visible = false
+modulate = Color( 1, 1, 1, 0.694118 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 3 )
