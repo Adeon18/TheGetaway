@@ -82,6 +82,7 @@ func process_atack():
 			selectionSprite.visible = false
 		elif collision and collision["collider"].get_collision_layer() == DISRUPT_LAYER:
 			collision["collider"].alert_enemies()
+			emit_signal("finish_turn")
 
 
 func process_movement():
