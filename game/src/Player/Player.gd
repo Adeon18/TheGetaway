@@ -18,6 +18,8 @@ onready var selectionSprite = $SelectionSprite
 var selectionTexture
 var selectionRefusedTexture
 
+onready var PopuPWindow = get_node("../../CanvasLayer/Popup")
+
 signal finish_turn
 
 func _ready():
@@ -78,6 +80,9 @@ func process_atack():
 		
 		if collision and collision["collider"].get_collision_layer() == ENEMY_LAYER:
 			collision["collider"].brein_stop()
+			PopuPWindow.window_popup({1: "agh, he stopped me!"})
+			$BreinStopStreamPlayer2D.play()
+			
 			emit_signal("finish_turn")
 			currentState = STATE.IDLE
 			selectionSprite.visible = false
