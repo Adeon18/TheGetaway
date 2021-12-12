@@ -9,6 +9,7 @@ export var messages = {
 
 export var typing_speed: float = 0.13
 export var in_window = false
+export var next_scene: PackedScene
 
 
 var message_cooldown = 1.5
@@ -27,6 +28,8 @@ onready var NextMessT: Timer = get_node("NextMessageTimer")
 func _ready():
 	if in_window:
 		ParentPopupWindow = get_node("../..")
+	else:
+		start_dialogue()
 
 
 func set_messages(new_messages):
@@ -49,6 +52,7 @@ func stop_dialogue():
 	if in_window:
 		ParentPopupWindow.window_hide()
 	else:
+		SceneTransition.change_scene(next_scene)
 	# TODO: Here should be The fadeout screen.
 		queue_free()
 
