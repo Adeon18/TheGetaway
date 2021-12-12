@@ -1,6 +1,7 @@
 extends KinematicBody2D
 
 var step = 64
+export var sight_dist = 300
 
 
 const WALL_LAYER = 4
@@ -36,6 +37,9 @@ var turn_dict = {
 var brein_stopped: bool = false
 export var stop_brein_for: int = 3
 var brein_was_stopped_for: int = 0
+
+var disturbed: bool = false
+var distruption_source: Vector2
 
 enum STATE {IDLE, TRANSITIONING}
 var current_state = STATE.IDLE
@@ -78,8 +82,11 @@ func make_turn():
 		brein_was_stopped_for = 0
 		cur_pos_tile = Tilemap.world_to_map(global_position)
 
-		print(triggered)
 		if look_for_player() or triggered:
+			# clear distruption
+			disturbed = false
+			distruption_source = Vector2.ZERO
+
 			dest_pos_tile = Tilemap.world_to_map(last_seen_pos)
 			path = Tilemap._get_path(cur_pos_tile, dest_pos_tile)
 			if path:
@@ -87,7 +94,10 @@ func make_turn():
 			else:
 				triggered = false
 				enemy_sprite.texture = enemy_texture
-		else:
+		elif disturbed == false:
+			# clear distruption
+			distruption_source = Vector2.ZERO
+
 			# if dest is point A
 			if (curr_patrool_target):
 				dest_pos_tile = Tilemap.world_to_map(PatroolPointA.global_position)
@@ -97,13 +107,28 @@ func make_turn():
 			# find path
 			path = Tilemap._get_path(cur_pos_tile, dest_pos_tile)
 			if path:
+				# if tehre is path, move
 				next_pos_vec = path[0] - cur_pos_tile
 			else:
+				# else, change patrool target, clear movement direction, set wait
 				curr_patrool_target = !curr_patrool_target
 				next_pos_vec = Vector2.ZERO
 				is_waiting = true
+		elif disturbed:
+			# if disturbed, move to the location of disturption
+			dest_pos_tile = Tilemap.world_to_map(distruption_source)
+			path = Tilemap._get_path(cur_pos_tile, dest_pos_tile)
+			if path:
+				# if there is path, move
+				next_pos_vec = path[0] - cur_pos_tile
+			else:
+				# clear distruption and next pos vector
+				disturbed = false
+				next_pos_vec = Vector2.ZERO
+				distruption_source = Vector2.ZERO
 		
 		if is_waiting: 
+			# if you are waiting - clear movement
 			next_pos_vec = Vector2.ZERO
 			curr_waited += 1
 		
@@ -133,14 +158,22 @@ func brein_stop():
 func get_class(): return "Enemy"
 
 func look_for_player():
-	var directState = get_world_2d().direct_space_state
-	var targetPosition = Player.global_position
-	var offset = global_position
-	var collision = directState.intersect_ray(offset, targetPosition, [self])
-	if collision["collider"].get_collision_layer() != WALL_LAYER:
-		last_seen_pos = Player.global_position
-		return true
+	var dif_in_dists = global_position - Player.global_position
+	var dist_to = sqrt(dif_in_dists.x * dif_in_dists.x + dif_in_dists.y*dif_in_dists.y)
+	if dist_to < sight_dist:
+		var directState = get_world_2d().direct_space_state
+		var targetPosition = Player.global_position
+		var offset = global_position
+		var collision = directState.intersect_ray(offset, targetPosition, [self])
+		if collision["collider"].get_collision_layer() != WALL_LAYER:
+			last_seen_pos = Player.global_position
+			return true
 	return false
+
+
+func disturb_enemy(source_gloal_position: Vector2):
+	distruption_source = source_gloal_position
+	disturbed = true
 
 
 func _on_PlayerDetector_body_entered(body):
