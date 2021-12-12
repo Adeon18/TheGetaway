@@ -50,11 +50,16 @@ onready var PatroolPointA = get_node("PatroolPointA")
 onready var PatroolPointB = get_node("PatroolPointB")
 onready var FOVLight = get_node("FOVLight")
 
+var enemy_texture
+var enemy_alerted_texture
+onready var enemy_sprite = $SpriteContainer/Sprite
+
 signal finish_turn
 
 
 func _ready():
-	pass
+	enemy_texture = load("res://art/Enemy/enemy.png")
+	enemy_alerted_texture = load("res://art/Enemy/enemy_alerted.png")
 
 
 func _physics_process(delta):
@@ -81,6 +86,7 @@ func make_turn():
 				next_pos_vec = path[0] - cur_pos_tile
 			else:
 				triggered = false
+				enemy_sprite.texture = enemy_texture
 		else:
 			# if dest is point A
 			if (curr_patrool_target):
@@ -141,4 +147,5 @@ func _on_PlayerDetector_body_entered(body):
 	if body.name == "Player":
 		if look_for_player():
 			triggered = true
+			enemy_sprite.texture = enemy_alerted_texture
 
