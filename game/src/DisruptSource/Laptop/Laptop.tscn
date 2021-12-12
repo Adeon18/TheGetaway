@@ -1,0 +1,29 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://art/Laptop/l0_sprite_11.png" type="Texture" id=1]
+[ext_resource path="res://src/DisruptSource/DisruptSource.tscn" type="PackedScene" id=2]
+[ext_resource path="res://art/Laptop/l0_sprite_12.png" type="Texture" id=3]
+[ext_resource path="res://DisruptSource.gd" type="Script" id=4]
+[ext_resource path="res://art/Laptop/l0_sprite_10.png" type="Texture" id=5]
+[ext_resource path="res://art/Laptop/l0_sprite_08.png" type="Texture" id=6]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 6 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 5 ), ExtResource( 1 ), ExtResource( 3 ) ],
+"loop": true,
+"name": "hacked",
+"speed": 5.0
+} ]
+
+[node name="DisruptSource" instance=ExtResource( 2 )]
+z_index = 10
+script = ExtResource( 4 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="." index="0"]
+frames = SubResource( 1 )
+animation = "hacked"

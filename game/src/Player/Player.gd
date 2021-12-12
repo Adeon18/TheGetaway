@@ -2,6 +2,7 @@ extends KinematicBody2D
 
 class_name Player
 
+const DISRUPT_LAYER = 1
 const WALL_LAYER = 4
 const ENEMY_LAYER = 2
 var step = 64
@@ -72,11 +73,16 @@ func process_atack():
 	if Input.is_action_just_pressed("left_click") and reachable:
 		var directState = get_world_2d().direct_space_state
 		var collision = directState.intersect_ray(selectionSprite.global_position, selectionSprite.global_position, [self])
+		
+	
 		if collision and collision["collider"].get_collision_layer() == ENEMY_LAYER:
 			print("Enemy Hit")
 			emit_signal("finish_turn")
 			currentState = STATE.IDLE
 			selectionSprite.visible = false
+		elif collision and collision["collider"].get_collision_layer() == DISRUPT_LAYER:
+			collision["collider"].alert_enemies()
+
 
 func process_movement():
 	if Input.is_action_just_pressed("ui_up"):
