@@ -32,9 +32,11 @@ _global_script_class_icons={
 
 [application]
 
-config/name="Hoydalka Gaem"
+config/name="The Getaway"
 run/main_scene="res://src/Levels/GameStart.tscn"
 config/icon="res://icon.png"
+config/macos_native_icon="res://icon.png"
+config/windows_native_icon="res://icon.png"
 
 [autoload]
 
