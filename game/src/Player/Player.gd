@@ -103,6 +103,8 @@ func die():
 	print("ded")
 	$SpriteContainer/Sprite.visible = false
 	$DeathParticles.emitting = true
+	$DieStreamPlayer2D.play()
+	SceneTransition.change_scene(load(get_tree().current_scene.filename))
 	$DeathTimer.start()
 
 

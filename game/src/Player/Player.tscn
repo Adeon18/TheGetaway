@@ -1,8 +1,9 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://src/Player/Player.gd" type="Script" id=1]
 [ext_resource path="res://art/Player/player.png" type="Texture" id=2]
 [ext_resource path="res://art/Player/selection.png" type="Texture" id=3]
+[ext_resource path="res://snd/death1_cut.mp3" type="AudioStream" id=4]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 32, 32 )
@@ -107,5 +108,9 @@ process_material = SubResource( 7 )
 
 [node name="DeathTimer" type="Timer" parent="."]
 wait_time = 2.0
+
+[node name="DieStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 4 )
+volume_db = -10.0
 
 [connection signal="timeout" from="DeathTimer" to="." method="_on_DeathTimer_timeout"]

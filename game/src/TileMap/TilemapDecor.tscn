@@ -1,0 +1,51 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://art/Tilemap/decorations/l0_sprite_1.png" type="Texture" id=1]
+[ext_resource path="res://art/Tilemap/decorations/l0_sprite_2.png" type="Texture" id=2]
+[ext_resource path="res://art/Tilemap/decorations/l0_sprite_6.png" type="Texture" id=3]
+[ext_resource path="res://art/Tilemap/decorations/l0_sprite_4.png" type="Texture" id=4]
+[ext_resource path="res://art/Tilemap/decorations/l0_sprite_5.png" type="Texture" id=5]
+[ext_resource path="res://art/Tilemap/decorations/l0_sprite_3.png" type="Texture" id=6]
+
+[node name="TilemapDecor" type="Node"]
+
+[node name="Tile1" type="Sprite" parent="."]
+position = Vector2( 32, 32 )
+z_index = 5
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 4, 4, 64, 64 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Tile2" type="Sprite" parent="."]
+position = Vector2( 160, 32 )
+z_index = 4
+texture = ExtResource( 2 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Tile3" type="Sprite" parent="."]
+position = Vector2( 288, 32 )
+z_index = 4
+texture = ExtResource( 6 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Tile4" type="Sprite" parent="."]
+position = Vector2( 32, 136 )
+z_index = 4
+texture = ExtResource( 4 )
+
+[node name="Tile5" type="Sprite" parent="."]
+position = Vector2( 160, 128 )
+z_index = 4
+texture = ExtResource( 5 )
+
+[node name="Tile6" type="Sprite" parent="."]
+position = Vector2( 288, 128 )
+z_index = 4
+texture = ExtResource( 3 )
