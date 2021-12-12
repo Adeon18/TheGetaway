@@ -54,7 +54,9 @@ func _physics_process(delta):
 
 
 func process_atack():
-	if Input.is_action_just_pressed("attack"):
+	if Input.is_action_just_pressed("attack") or Input.is_action_just_pressed("ui_cancel") \
+	or Input.is_action_just_pressed("ui_down") or Input.is_action_just_pressed("ui_up") \
+	or Input.is_action_just_pressed("ui_left") or Input.is_action_just_pressed("ui_right"):
 		selectionSprite.visible = false
 		currentState = STATE.IDLE
 		return
@@ -83,6 +85,8 @@ func process_atack():
 		elif collision and collision["collider"].get_collision_layer() == DISRUPT_LAYER:
 			collision["collider"].alert_enemies()
 			emit_signal("finish_turn")
+			selectionSprite.visible = false
+			currentState = STATE.IDLE
 
 
 func process_movement():
