@@ -1,13 +1,59 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://src/Enemy/Enemy.gd" type="Script" id=1]
-[ext_resource path="res://icon.png" type="Texture" id=2]
+[ext_resource path="res://art/Enemy/l0_sprite_2.png" type="Texture" id=2]
+[ext_resource path="res://art/Light/2D_dirlight_blackbg.png" type="Texture" id=3]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 16, 16 )
 
+[sub_resource type="Animation" id=2]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("SpriteContainer:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ) ]
+}
+
+[sub_resource type="Animation" id=3]
+resource_name = "idle"
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("SpriteContainer:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5, 1 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ), Vector2( 1.1, 0.9 ), Vector2( 1, 1 ) ]
+}
+
+[sub_resource type="AnimationNodeAnimation" id=4]
+animation = "idle"
+
+[sub_resource type="AnimationNodeTimeScale" id=5]
+
+[sub_resource type="AnimationNodeBlendTree" id=6]
+nodes/Animation/node = SubResource( 4 )
+nodes/Animation/position = Vector2( 183, 91 )
+nodes/TimeScale/node = SubResource( 5 )
+nodes/TimeScale/position = Vector2( 420, 60 )
+nodes/output/position = Vector2( 660, 80 )
+node_connections = [ "output", 0, "TimeScale", "TimeScale", 0, "Animation" ]
+
 [node name="Enemy" type="KinematicBody2D"]
 z_index = 9
+z_as_relative = false
 collision_layer = 2
 script = ExtResource( 1 )
 
@@ -25,10 +71,28 @@ rotation = 1.5708
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="PlayerDetector"]
 position = Vector2( 0, 8 )
+scale = Vector2( 0.677387, 1 )
 polygon = PoolVector2Array( 8, -8, 192, -320, -192, -320, -8, -8 )
 
 [node name="PatroolPointA" type="Position2D" parent="."]
 
 [node name="PatroolPointB" type="Position2D" parent="."]
+
+[node name="FOVLight" type="Light2D" parent="."]
+z_index = 2
+z_as_relative = false
+texture = ExtResource( 3 )
+offset = Vector2( -25, 13 )
+shadow_enabled = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/RESET = SubResource( 2 )
+anims/idle = SubResource( 3 )
+
+[node name="AnimationTree" type="AnimationTree" parent="."]
+tree_root = SubResource( 6 )
+anim_player = NodePath("../AnimationPlayer")
+active = true
+parameters/TimeScale/scale = 1.0
 
 [connection signal="body_entered" from="PlayerDetector" to="." method="_on_PlayerDetector_body_entered"]

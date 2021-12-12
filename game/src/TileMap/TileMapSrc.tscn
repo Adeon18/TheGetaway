@@ -1,9 +1,12 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://art/Tilemap/tiles.png" type="Texture" id=1]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 32, 32 )
+
+[sub_resource type="OccluderPolygon2D" id=2]
+polygon = PoolVector2Array( -32, -32, 32, -32, 32, 32, -32, 32 )
 
 [node name="TileMapSrc" type="Node"]
 
@@ -24,6 +27,9 @@ collision_mask = 0
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Tile1/StaticBody2D"]
 shape = SubResource( 1 )
 
+[node name="LightOccluder2D" type="LightOccluder2D" parent="Tile1"]
+occluder = SubResource( 2 )
+
 [node name="Tile2" type="Sprite" parent="."]
 position = Vector2( 128, 32 )
 z_index = 5
@@ -40,6 +46,9 @@ collision_mask = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Tile2/StaticBody2D"]
 shape = SubResource( 1 )
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="Tile2"]
+occluder = SubResource( 2 )
 
 [node name="Tile3" type="Sprite" parent="."]
 position = Vector2( 224, 32 )
@@ -58,6 +67,9 @@ collision_mask = 0
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Tile3/StaticBody2D"]
 shape = SubResource( 1 )
 
+[node name="LightOccluder2D" type="LightOccluder2D" parent="Tile3"]
+occluder = SubResource( 2 )
+
 [node name="Tile4" type="Sprite" parent="."]
 position = Vector2( 320, 32 )
 z_index = 5
@@ -74,6 +86,9 @@ collision_mask = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Tile4/StaticBody2D"]
 shape = SubResource( 1 )
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="Tile4"]
+occluder = SubResource( 2 )
 
 [node name="Tile5" type="Sprite" parent="."]
 position = Vector2( 416, 32 )
@@ -92,6 +107,9 @@ collision_mask = 0
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Tile5/StaticBody2D"]
 shape = SubResource( 1 )
 
+[node name="LightOccluder2D" type="LightOccluder2D" parent="Tile5"]
+occluder = SubResource( 2 )
+
 [node name="Tile6" type="Sprite" parent="."]
 position = Vector2( 512, 32 )
 z_index = 5
@@ -108,6 +126,9 @@ collision_mask = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Tile6/StaticBody2D"]
 shape = SubResource( 1 )
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="Tile6"]
+occluder = SubResource( 2 )
 
 [node name="Tile7" type="Sprite" parent="."]
 position = Vector2( 608, 32 )
@@ -126,6 +147,9 @@ collision_mask = 0
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Tile7/StaticBody2D"]
 shape = SubResource( 1 )
 
+[node name="LightOccluder2D" type="LightOccluder2D" parent="Tile7"]
+occluder = SubResource( 2 )
+
 [node name="Tile8" type="Sprite" parent="."]
 position = Vector2( 704, 32 )
 z_index = 5
@@ -142,6 +166,9 @@ collision_mask = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Tile8/StaticBody2D"]
 shape = SubResource( 1 )
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="Tile8"]
+occluder = SubResource( 2 )
 
 [node name="Tile9" type="Sprite" parent="."]
 position = Vector2( 800, 32 )
@@ -160,6 +187,9 @@ collision_mask = 0
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Tile9/StaticBody2D"]
 shape = SubResource( 1 )
 
+[node name="LightOccluder2D" type="LightOccluder2D" parent="Tile9"]
+occluder = SubResource( 2 )
+
 [node name="Tile10" type="Sprite" parent="."]
 position = Vector2( 32, 128 )
 z_index = 5
@@ -176,6 +206,9 @@ collision_mask = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Tile10/StaticBody2D"]
 shape = SubResource( 1 )
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="Tile10"]
+occluder = SubResource( 2 )
 
 [node name="Tile11" type="Sprite" parent="."]
 position = Vector2( 128, 128 )
@@ -194,6 +227,9 @@ collision_mask = 0
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Tile11/StaticBody2D"]
 shape = SubResource( 1 )
 
+[node name="LightOccluder2D" type="LightOccluder2D" parent="Tile11"]
+occluder = SubResource( 2 )
+
 [node name="Tile12" type="Sprite" parent="."]
 position = Vector2( 224, 128 )
 z_index = 5
@@ -210,6 +246,9 @@ collision_mask = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Tile12/StaticBody2D"]
 shape = SubResource( 1 )
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="Tile12"]
+occluder = SubResource( 2 )
 
 [node name="Tile13" type="Sprite" parent="."]
 position = Vector2( 320, 128 )
@@ -228,6 +267,9 @@ collision_mask = 0
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Tile13/StaticBody2D"]
 shape = SubResource( 1 )
 
+[node name="LightOccluder2D" type="LightOccluder2D" parent="Tile13"]
+occluder = SubResource( 2 )
+
 [node name="Tile14" type="Sprite" parent="."]
 position = Vector2( 416, 128 )
 z_index = 5
@@ -244,6 +286,9 @@ collision_mask = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Tile14/StaticBody2D"]
 shape = SubResource( 1 )
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="Tile14"]
+occluder = SubResource( 2 )
 
 [node name="Tile15" type="Sprite" parent="."]
 position = Vector2( 512, 128 )
@@ -262,6 +307,9 @@ collision_mask = 0
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Tile15/StaticBody2D"]
 shape = SubResource( 1 )
 
+[node name="LightOccluder2D" type="LightOccluder2D" parent="Tile15"]
+occluder = SubResource( 2 )
+
 [node name="Tile16" type="Sprite" parent="."]
 position = Vector2( 608, 128 )
 z_index = 5
@@ -278,6 +326,9 @@ collision_mask = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Tile16/StaticBody2D"]
 shape = SubResource( 1 )
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="Tile16"]
+occluder = SubResource( 2 )
 
 [node name="Tile17" type="Sprite" parent="."]
 position = Vector2( 704, 128 )
@@ -296,6 +347,9 @@ collision_mask = 0
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Tile17/StaticBody2D"]
 shape = SubResource( 1 )
 
+[node name="LightOccluder2D" type="LightOccluder2D" parent="Tile17"]
+occluder = SubResource( 2 )
+
 [node name="Tile18" type="Sprite" parent="."]
 position = Vector2( 800, 128 )
 z_index = 5
@@ -312,6 +366,9 @@ collision_mask = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Tile18/StaticBody2D"]
 shape = SubResource( 1 )
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="Tile18"]
+occluder = SubResource( 2 )
 
 [node name="Tile19" type="Sprite" parent="."]
 position = Vector2( 32, 224 )
@@ -330,6 +387,9 @@ collision_mask = 0
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Tile19/StaticBody2D"]
 shape = SubResource( 1 )
 
+[node name="LightOccluder2D" type="LightOccluder2D" parent="Tile19"]
+occluder = SubResource( 2 )
+
 [node name="Tile20" type="Sprite" parent="."]
 position = Vector2( 128, 224 )
 z_index = 5
@@ -346,6 +406,9 @@ collision_mask = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Tile20/StaticBody2D"]
 shape = SubResource( 1 )
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="Tile20"]
+occluder = SubResource( 2 )
 
 [node name="Tile21" type="Sprite" parent="."]
 position = Vector2( 224, 224 )
@@ -364,6 +427,9 @@ collision_mask = 0
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Tile21/StaticBody2D"]
 shape = SubResource( 1 )
 
+[node name="LightOccluder2D" type="LightOccluder2D" parent="Tile21"]
+occluder = SubResource( 2 )
+
 [node name="Tile22" type="Sprite" parent="."]
 position = Vector2( 320, 224 )
 z_index = 5
@@ -380,6 +446,9 @@ collision_mask = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Tile22/StaticBody2D"]
 shape = SubResource( 1 )
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="Tile22"]
+occluder = SubResource( 2 )
 
 [node name="Tile23" type="Sprite" parent="."]
 position = Vector2( 416, 224 )
@@ -398,6 +467,9 @@ collision_mask = 0
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Tile23/StaticBody2D"]
 shape = SubResource( 1 )
 
+[node name="LightOccluder2D" type="LightOccluder2D" parent="Tile23"]
+occluder = SubResource( 2 )
+
 [node name="Tile24" type="Sprite" parent="."]
 position = Vector2( 512, 224 )
 z_index = 5
@@ -414,6 +486,9 @@ collision_mask = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Tile24/StaticBody2D"]
 shape = SubResource( 1 )
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="Tile24"]
+occluder = SubResource( 2 )
 
 [node name="Tile25" type="Sprite" parent="."]
 position = Vector2( 608, 224 )
@@ -432,6 +507,9 @@ collision_mask = 0
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Tile25/StaticBody2D"]
 shape = SubResource( 1 )
 
+[node name="LightOccluder2D" type="LightOccluder2D" parent="Tile25"]
+occluder = SubResource( 2 )
+
 [node name="Tile26" type="Sprite" parent="."]
 position = Vector2( 704, 224 )
 z_index = 5
@@ -448,6 +526,9 @@ collision_mask = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Tile26/StaticBody2D"]
 shape = SubResource( 1 )
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="Tile26"]
+occluder = SubResource( 2 )
 
 [node name="Tile27" type="Sprite" parent="."]
 position = Vector2( 800, 224 )
@@ -466,6 +547,9 @@ collision_mask = 0
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Tile27/StaticBody2D"]
 shape = SubResource( 1 )
 
+[node name="LightOccluder2D" type="LightOccluder2D" parent="Tile27"]
+occluder = SubResource( 2 )
+
 [node name="Tile28" type="Sprite" parent="."]
 position = Vector2( 32, 320 )
 z_index = 5
@@ -482,6 +566,9 @@ collision_mask = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Tile28/StaticBody2D"]
 shape = SubResource( 1 )
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="Tile28"]
+occluder = SubResource( 2 )
 
 [node name="Tile29" type="Sprite" parent="."]
 position = Vector2( 128, 320 )
@@ -500,6 +587,9 @@ collision_mask = 0
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Tile29/StaticBody2D"]
 shape = SubResource( 1 )
 
+[node name="LightOccluder2D" type="LightOccluder2D" parent="Tile29"]
+occluder = SubResource( 2 )
+
 [node name="Tile30" type="Sprite" parent="."]
 position = Vector2( 224, 320 )
 z_index = 5
@@ -516,6 +606,9 @@ collision_mask = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Tile30/StaticBody2D"]
 shape = SubResource( 1 )
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="Tile30"]
+occluder = SubResource( 2 )
 
 [node name="Tile31" type="Sprite" parent="."]
 position = Vector2( 320, 320 )
@@ -534,6 +627,9 @@ collision_mask = 0
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Tile31/StaticBody2D"]
 shape = SubResource( 1 )
 
+[node name="LightOccluder2D" type="LightOccluder2D" parent="Tile31"]
+occluder = SubResource( 2 )
+
 [node name="Tile32" type="Sprite" parent="."]
 position = Vector2( 416, 320 )
 z_index = 5
@@ -550,6 +646,9 @@ collision_mask = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Tile32/StaticBody2D"]
 shape = SubResource( 1 )
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="Tile32"]
+occluder = SubResource( 2 )
 
 [node name="Tile33" type="Sprite" parent="."]
 position = Vector2( 512, 320 )
@@ -568,6 +667,9 @@ collision_mask = 0
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Tile33/StaticBody2D"]
 shape = SubResource( 1 )
 
+[node name="LightOccluder2D" type="LightOccluder2D" parent="Tile33"]
+occluder = SubResource( 2 )
+
 [node name="Tile34" type="Sprite" parent="."]
 position = Vector2( 608, 320 )
 z_index = 5
@@ -584,6 +686,9 @@ collision_mask = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Tile34/StaticBody2D"]
 shape = SubResource( 1 )
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="Tile34"]
+occluder = SubResource( 2 )
 
 [node name="Tile35" type="Sprite" parent="."]
 position = Vector2( 704, 320 )
@@ -602,6 +707,9 @@ collision_mask = 0
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Tile35/StaticBody2D"]
 shape = SubResource( 1 )
 
+[node name="LightOccluder2D" type="LightOccluder2D" parent="Tile35"]
+occluder = SubResource( 2 )
+
 [node name="Tile36" type="Sprite" parent="."]
 position = Vector2( 800, 320 )
 z_index = 5
@@ -618,6 +726,9 @@ collision_mask = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Tile36/StaticBody2D"]
 shape = SubResource( 1 )
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="Tile36"]
+occluder = SubResource( 2 )
 
 [node name="Tile37" type="Sprite" parent="."]
 position = Vector2( 32, 416 )
@@ -636,6 +747,9 @@ collision_mask = 0
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Tile37/StaticBody2D"]
 shape = SubResource( 1 )
 
+[node name="LightOccluder2D" type="LightOccluder2D" parent="Tile37"]
+occluder = SubResource( 2 )
+
 [node name="Tile38" type="Sprite" parent="."]
 position = Vector2( 128, 416 )
 z_index = 5
@@ -652,6 +766,9 @@ collision_mask = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Tile38/StaticBody2D"]
 shape = SubResource( 1 )
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="Tile38"]
+occluder = SubResource( 2 )
 
 [node name="Tile39" type="Sprite" parent="."]
 position = Vector2( 224, 416 )
@@ -670,6 +787,9 @@ collision_mask = 0
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Tile39/StaticBody2D"]
 shape = SubResource( 1 )
 
+[node name="LightOccluder2D" type="LightOccluder2D" parent="Tile39"]
+occluder = SubResource( 2 )
+
 [node name="Tile40" type="Sprite" parent="."]
 position = Vector2( 320, 416 )
 z_index = 5
@@ -686,6 +806,9 @@ collision_mask = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Tile40/StaticBody2D"]
 shape = SubResource( 1 )
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="Tile40"]
+occluder = SubResource( 2 )
 
 [node name="Tile41" type="Sprite" parent="."]
 position = Vector2( 416, 416 )
@@ -704,6 +827,9 @@ collision_mask = 0
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Tile41/StaticBody2D"]
 shape = SubResource( 1 )
 
+[node name="LightOccluder2D" type="LightOccluder2D" parent="Tile41"]
+occluder = SubResource( 2 )
+
 [node name="Tile42" type="Sprite" parent="."]
 position = Vector2( 512, 416 )
 z_index = 5
@@ -720,6 +846,9 @@ collision_mask = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Tile42/StaticBody2D"]
 shape = SubResource( 1 )
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="Tile42"]
+occluder = SubResource( 2 )
 
 [node name="Tile43" type="Sprite" parent="."]
 position = Vector2( 608, 416 )
@@ -738,6 +867,9 @@ collision_mask = 0
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Tile43/StaticBody2D"]
 shape = SubResource( 1 )
 
+[node name="LightOccluder2D" type="LightOccluder2D" parent="Tile43"]
+occluder = SubResource( 2 )
+
 [node name="Tile44" type="Sprite" parent="."]
 position = Vector2( 704, 416 )
 z_index = 5
@@ -754,6 +886,9 @@ collision_mask = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Tile44/StaticBody2D"]
 shape = SubResource( 1 )
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="Tile44"]
+occluder = SubResource( 2 )
 
 [node name="Tile45" type="Sprite" parent="."]
 position = Vector2( 800, 416 )
@@ -772,6 +907,9 @@ collision_mask = 0
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Tile45/StaticBody2D"]
 shape = SubResource( 1 )
 
+[node name="LightOccluder2D" type="LightOccluder2D" parent="Tile45"]
+occluder = SubResource( 2 )
+
 [node name="Tile46" type="Sprite" parent="."]
 position = Vector2( 32, 520 )
 z_index = 5
@@ -788,6 +926,9 @@ collision_mask = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Tile46/StaticBody2D"]
 shape = SubResource( 1 )
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="Tile46"]
+occluder = SubResource( 2 )
 
 [node name="Tile47" type="Sprite" parent="."]
 position = Vector2( 32, 520 )
@@ -806,6 +947,9 @@ collision_mask = 0
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Tile47/StaticBody2D"]
 shape = SubResource( 1 )
 
+[node name="LightOccluder2D" type="LightOccluder2D" parent="Tile47"]
+occluder = SubResource( 2 )
+
 [node name="Tile48" type="Sprite" parent="."]
 position = Vector2( 128, 520 )
 z_index = 5
@@ -822,6 +966,9 @@ collision_mask = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Tile48/StaticBody2D"]
 shape = SubResource( 1 )
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="Tile48"]
+occluder = SubResource( 2 )
 
 [node name="Tile49" type="Sprite" parent="."]
 position = Vector2( 224, 520 )
@@ -840,6 +987,9 @@ collision_mask = 0
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Tile49/StaticBody2D"]
 shape = SubResource( 1 )
 
+[node name="LightOccluder2D" type="LightOccluder2D" parent="Tile49"]
+occluder = SubResource( 2 )
+
 [node name="Tile50" type="Sprite" parent="."]
 position = Vector2( 320, 520 )
 z_index = 5
@@ -856,6 +1006,9 @@ collision_mask = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Tile50/StaticBody2D"]
 shape = SubResource( 1 )
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="Tile50"]
+occluder = SubResource( 2 )
 
 [node name="Tile51" type="Sprite" parent="."]
 position = Vector2( 416, 520 )
@@ -874,6 +1027,9 @@ collision_mask = 0
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Tile51/StaticBody2D"]
 shape = SubResource( 1 )
 
+[node name="LightOccluder2D" type="LightOccluder2D" parent="Tile51"]
+occluder = SubResource( 2 )
+
 [node name="Tile52" type="Sprite" parent="."]
 position = Vector2( 512, 520 )
 z_index = 5
@@ -891,6 +1047,9 @@ collision_mask = 0
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Tile52/StaticBody2D"]
 shape = SubResource( 1 )
 
+[node name="LightOccluder2D" type="LightOccluder2D" parent="Tile52"]
+occluder = SubResource( 2 )
+
 [node name="Tile53" type="Sprite" parent="."]
 position = Vector2( 608, 520 )
 z_index = 5
@@ -907,6 +1066,9 @@ collision_mask = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Tile53/StaticBody2D"]
 shape = SubResource( 1 )
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="Tile53"]
+occluder = SubResource( 2 )
 
 [node name="Tile55" type="Sprite" parent="."]
 position = Vector2( 704, 520 )
@@ -927,6 +1089,9 @@ collision_mask = 0
 z_index = 5
 shape = SubResource( 1 )
 
+[node name="LightOccluder2D" type="LightOccluder2D" parent="Tile55"]
+occluder = SubResource( 2 )
+
 [node name="Tile56" type="Sprite" parent="."]
 position = Vector2( 800, 520 )
 z_index = 5
@@ -945,6 +1110,9 @@ collision_mask = 0
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Tile56/StaticBody2D"]
 z_index = 5
 shape = SubResource( 1 )
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="Tile56"]
+occluder = SubResource( 2 )
 
 [node name="Tile57" type="Sprite" parent="."]
 position = Vector2( 32, 608 )
@@ -965,6 +1133,9 @@ collision_mask = 0
 z_index = 5
 shape = SubResource( 1 )
 
+[node name="LightOccluder2D" type="LightOccluder2D" parent="Tile57"]
+occluder = SubResource( 2 )
+
 [node name="Tile58" type="Sprite" parent="."]
 position = Vector2( 128, 608 )
 z_index = 5
@@ -983,6 +1154,9 @@ collision_mask = 0
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Tile58/StaticBody2D"]
 z_index = 5
 shape = SubResource( 1 )
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="Tile58"]
+occluder = SubResource( 2 )
 
 [node name="Tile59" type="Sprite" parent="."]
 position = Vector2( 224, 608 )
@@ -1003,6 +1177,9 @@ collision_mask = 0
 z_index = 5
 shape = SubResource( 1 )
 
+[node name="LightOccluder2D" type="LightOccluder2D" parent="Tile59"]
+occluder = SubResource( 2 )
+
 [node name="Tile60" type="Sprite" parent="."]
 position = Vector2( 320, 608 )
 z_index = 5
@@ -1021,6 +1198,9 @@ collision_mask = 0
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Tile60/StaticBody2D"]
 z_index = 5
 shape = SubResource( 1 )
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="Tile60"]
+occluder = SubResource( 2 )
 
 [node name="Tile61" type="Sprite" parent="."]
 position = Vector2( 416, 608 )
@@ -1041,6 +1221,9 @@ collision_mask = 0
 z_index = 5
 shape = SubResource( 1 )
 
+[node name="LightOccluder2D" type="LightOccluder2D" parent="Tile61"]
+occluder = SubResource( 2 )
+
 [node name="Tile62" type="Sprite" parent="."]
 position = Vector2( 512, 608 )
 z_index = 5
@@ -1059,6 +1242,9 @@ collision_mask = 0
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Tile62/StaticBody2D"]
 z_index = 5
 shape = SubResource( 1 )
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="Tile62"]
+occluder = SubResource( 2 )
 
 [node name="Tile63" type="Sprite" parent="."]
 position = Vector2( 608, 608 )
@@ -1079,6 +1265,9 @@ collision_mask = 0
 z_index = 5
 shape = SubResource( 1 )
 
+[node name="LightOccluder2D" type="LightOccluder2D" parent="Tile63"]
+occluder = SubResource( 2 )
+
 [node name="Tile64" type="Sprite" parent="."]
 position = Vector2( 704, 608 )
 z_index = 5
@@ -1097,6 +1286,9 @@ collision_mask = 0
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Tile64/StaticBody2D"]
 z_index = 5
 shape = SubResource( 1 )
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="Tile64"]
+occluder = SubResource( 2 )
 
 [node name="Tile65" type="Sprite" parent="."]
 position = Vector2( 800, 608 )
@@ -1117,6 +1309,9 @@ collision_mask = 0
 z_index = 5
 shape = SubResource( 1 )
 
+[node name="LightOccluder2D" type="LightOccluder2D" parent="Tile65"]
+occluder = SubResource( 2 )
+
 [node name="Tile66" type="Sprite" parent="."]
 position = Vector2( 32, 704 )
 z_index = 5
@@ -1135,6 +1330,9 @@ collision_mask = 0
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Tile66/StaticBody2D"]
 z_index = 5
 shape = SubResource( 1 )
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="Tile66"]
+occluder = SubResource( 2 )
 
 [node name="Tile67" type="Sprite" parent="."]
 position = Vector2( 128, 704 )
@@ -1155,6 +1353,9 @@ collision_mask = 0
 z_index = 5
 shape = SubResource( 1 )
 
+[node name="LightOccluder2D" type="LightOccluder2D" parent="Tile67"]
+occluder = SubResource( 2 )
+
 [node name="Tile68" type="Sprite" parent="."]
 position = Vector2( 224, 704 )
 z_index = 5
@@ -1173,6 +1374,9 @@ collision_mask = 0
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Tile68/StaticBody2D"]
 z_index = 5
 shape = SubResource( 1 )
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="Tile68"]
+occluder = SubResource( 2 )
 
 [node name="Tile69" type="Sprite" parent="."]
 position = Vector2( 320, 704 )
@@ -1193,6 +1397,9 @@ collision_mask = 0
 z_index = 5
 shape = SubResource( 1 )
 
+[node name="LightOccluder2D" type="LightOccluder2D" parent="Tile69"]
+occluder = SubResource( 2 )
+
 [node name="Tile70" type="Sprite" parent="."]
 position = Vector2( 416, 704 )
 z_index = 5
@@ -1212,6 +1419,9 @@ collision_mask = 0
 z_index = 5
 shape = SubResource( 1 )
 
+[node name="LightOccluder2D" type="LightOccluder2D" parent="Tile70"]
+occluder = SubResource( 2 )
+
 [node name="Tile71" type="Sprite" parent="."]
 position = Vector2( 512, 704 )
 z_index = 5
@@ -1228,6 +1438,9 @@ collision_mask = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Tile71/StaticBody2D"]
 shape = SubResource( 1 )
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="Tile71"]
+occluder = SubResource( 2 )
 
 [node name="Tile54" type="Sprite" parent="."]
 position = Vector2( 960, 352 )
