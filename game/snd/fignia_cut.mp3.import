@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/fignia_cut.mp3-7bb0d1ea4f81fb2ef942de2c275407ce.mp3str"
+
+[deps]
+
+source_file="res://snd/fignia_cut.mp3"
+dest_files=[ "res://.import/fignia_cut.mp3-7bb0d1ea4f81fb2ef942de2c275407ce.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

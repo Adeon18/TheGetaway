@@ -23,6 +23,7 @@ var ParentPopupWindow
 onready var LabelObj: Label = get_node("Label")
 onready var NextCharT: Timer = get_node("NextCharTimer")
 onready var NextMessT: Timer = get_node("NextMessageTimer")
+onready var StreamPlayer = get_node("AudioStreamPlayer2D")
 
 
 func _ready():
@@ -73,6 +74,7 @@ func _on_NextCharTimer_timeout():
 		
 		LabelObj.text = current_display
 		current_char += 1
+		StreamPlayer.play()
 	else:
 		NextCharT.stop()
 		NextMessT.one_shot = true

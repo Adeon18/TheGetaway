@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/move_cut.mp3-6936d279ef4979da29da24cfc78e3cd4.mp3str"
+
+[deps]
+
+source_file="res://snd/move_cut.mp3"
+dest_files=[ "res://.import/move_cut.mp3-6936d279ef4979da29da24cfc78e3cd4.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0
