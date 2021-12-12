@@ -1563,3 +1563,17 @@ extents = Vector2( 32, 32 )
 "shape_transform": Transform2D( 1, 0, 0, 1, 32, 32 )
 } ]
 70/z_index = 5
+71/name = "Tile72"
+71/texture = ExtResource( 1 )
+71/tex_offset = Vector2( 0, 0 )
+71/modulate = Color( 1, 1, 1, 1 )
+71/region = Rect2( 480, 276, 64, 64 )
+71/tile_mode = 0
+71/occluder_offset = Vector2( 32, 32 )
+71/navigation_offset = Vector2( 32, 32 )
+71/shape_offset = Vector2( 0, 0 )
+71/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+71/shape_one_way = false
+71/shape_one_way_margin = 0.0
+71/shapes = [  ]
+71/z_index = 1

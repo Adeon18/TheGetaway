@@ -1452,3 +1452,14 @@ region_rect = Rect2( 480, 276, 64, 64 )
 __meta__ = {
 "_edit_group_": true
 }
+
+[node name="Tile72" type="Sprite" parent="."]
+position = Vector2( 960, 456 )
+z_index = 1
+z_as_relative = false
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 480, 276, 64, 64 )
+__meta__ = {
+"_edit_group_": true
+}
