@@ -1,0 +1,106 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://src/UI/DynamicText.gd" type="Script" id=1]
+[ext_resource path="res://art/Fonts/Pixeled.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://src/UI/PopUpWindow.gd" type="Script" id=3]
+[ext_resource path="res://art/UI/window.png" type="Texture" id=4]
+
+[sub_resource type="DynamicFont" id=1]
+size = 50
+outline_color = Color( 0.192157, 0.266667, 0.235294, 1 )
+font_data = ExtResource( 2 )
+
+[sub_resource type="Animation" id=4]
+resource_name = "hide"
+tracks/0/type = "value"
+tracks/0/path = NodePath("Window:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 0.732043, 1.93187 ),
+"update": 0,
+"values": [ Vector2( 816, 24 ), Vector2( 816, 300 ) ]
+}
+
+[sub_resource type="Animation" id=3]
+resource_name = "idle"
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("Window:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 816, 300 ) ]
+}
+
+[sub_resource type="Animation" id=2]
+resource_name = "popup"
+tracks/0/type = "value"
+tracks/0/path = NodePath("Window:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.7, 1 ),
+"transitions": PoolRealArray( 1.93187, 0.535887, 1.27456 ),
+"update": 0,
+"values": [ Vector2( 816, 300 ), Vector2( 816, 0 ), Vector2( 816, 24 ) ]
+}
+
+[node name="Popup" type="Control"]
+margin_left = 136.0
+margin_top = 864.0
+margin_right = 1784.0
+margin_bottom = 1080.0
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Window" type="Sprite" parent="."]
+position = Vector2( 816, 24 )
+scale = Vector2( 2, 0.8 )
+texture = ExtResource( 4 )
+
+[node name="DynamicText" type="Node2D" parent="Window"]
+position = Vector2( -408, -30 )
+scale = Vector2( 0.5, 1.25 )
+script = ExtResource( 1 )
+in_window = true
+
+[node name="Label" type="Label" parent="Window/DynamicText"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 176.0
+margin_top = -16.0
+margin_right = 1456.0
+margin_bottom = 200.0
+custom_colors/font_color = Color( 0.152941, 0.67451, 0.309804, 1 )
+custom_fonts/font = SubResource( 1 )
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="NextCharTimer" type="Timer" parent="Window/DynamicText"]
+
+[node name="NextMessageTimer" type="Timer" parent="Window/DynamicText"]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+autoplay = "idle"
+anims/hide = SubResource( 4 )
+anims/idle = SubResource( 3 )
+anims/popup = SubResource( 2 )
+
+[connection signal="timeout" from="Window/DynamicText/NextCharTimer" to="Window/DynamicText" method="_on_NextCharTimer_timeout"]
+[connection signal="timeout" from="Window/DynamicText/NextMessageTimer" to="Window/DynamicText" method="_on_NextMessageTimer_timeout"]
