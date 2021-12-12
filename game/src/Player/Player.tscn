@@ -53,6 +53,7 @@ nodes/output/position = Vector2( 500, 200 )
 node_connections = [ "output", 0, "TimeScale", "TimeScale", 0, "Animation" ]
 
 [node name="Player" type="KinematicBody2D"]
+collision_mask = 9
 script = ExtResource( 1 )
 
 [node name="CollisionBox" type="CollisionShape2D" parent="."]
