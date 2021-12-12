@@ -15,7 +15,7 @@ var rnd_dir_choice: int
 # FALSE : PointA
 # TRUE : PointB
 var curr_patrool_target: bool = false
-export var wait_in_patrool_points: int = 2
+export var wait_in_patrool_points: int = 5
 var curr_waited: int = 0
 var is_waiting: bool = false
 
@@ -34,7 +34,7 @@ var turn_dict = {
 }
 
 var brein_stopped: bool = false
-export var stop_brein_for: int = 3
+export var stop_brein_for: int = 6
 var brein_was_stopped_for: int = 0
 
 var disturbed: bool = false
