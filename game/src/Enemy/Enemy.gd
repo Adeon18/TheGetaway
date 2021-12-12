@@ -31,7 +31,6 @@ var turn_dict = {
 	Vector2(1, 0): 90,
 	Vector2(0, -1): 0,
 	Vector2(-1, 0): 270,
-	
 }
 
 var brein_stopped: bool = false
@@ -53,17 +52,21 @@ onready var PlayerDetector = get_node("PlayerDetector")
 onready var PatroolPointA = get_node("PatroolPointA")
 onready var PatroolPointB = get_node("PatroolPointB")
 onready var FOVLight = get_node("FOVLight")
+onready var Raycast = get_node("RayCast2D")
+onready var Turnqueue = get_parent()
 
 var enemy_texture
 var enemy_alerted_texture
 onready var enemy_sprite = $SpriteContainer/Sprite
 
+var turn_finished = false
 signal finish_turn
 
 
 func _ready():
 	enemy_texture = load("res://art/Enemy/enemy.png")
 	enemy_alerted_texture = load("res://art/Enemy/enemy_alerted.png")
+
 
 
 func _physics_process(delta):
@@ -131,14 +134,30 @@ func make_turn():
 			# if you are waiting - clear movement
 			next_pos_vec = Vector2.ZERO
 			curr_waited += 1
+
+
+		if Turnqueue.positions.find(Tilemap.world_to_map(global_position + next_pos_vec*step)) != -1:
+			next_pos_vec = Vector2.ZERO
+		else:
+			Turnqueue.positions.append(Tilemap.world_to_map(global_position + next_pos_vec*step))
+			var idx = Turnqueue.positions.find(Tilemap.world_to_map(global_position))
+			Turnqueue.positions.remove(idx)
 		
 #		global_position += next_pos_vec * step
-		target_position = global_position + next_pos_vec * step
-		current_state = STATE.TRANSITIONING
+		
+		
 
 		if next_pos_vec != Vector2.ZERO:
 			PlayerDetector.rotation_degrees = turn_dict[next_pos_vec]
 			FOVLight.rotation_degrees = turn_dict[next_pos_vec]+90
+			Raycast.rotation_degrees = turn_dict[next_pos_vec]+180
+		var collide_with = Raycast.get_collider()
+
+		target_position = global_position + next_pos_vec * step
+		current_state = STATE.TRANSITIONING
+		
+		
+		
 		prev_pos_vec = next_pos_vec
 		PatroolPointA.global_position -= prev_pos_vec * step
 		PatroolPointB.global_position -= prev_pos_vec * step
@@ -150,6 +169,7 @@ func make_turn():
 		if brein_was_stopped_for >= stop_brein_for:
 			brein_stopped = false
 			brein_was_stopped_for = 0
+	
 
 
 func brein_stop():

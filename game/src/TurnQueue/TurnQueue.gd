@@ -4,6 +4,7 @@ class_name TurnQueue
 
 var active_char
 
+var positions: Array = []
 
 
 func _ready():
