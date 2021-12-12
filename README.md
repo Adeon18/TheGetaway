@@ -9,7 +9,7 @@
 
 The main hero of the game is being hounted by the evil agents. He should distract them using his special ability directly, or by interracting with surrounding objects. The aim is to pass the level without getting caught by the agents, while the world keeps breaking down more and more.
 
-<img src="https://user-images.githubusercontent.com/73172589/145733849-64a64dea-8493-4535-a0c7-0ec7551ecc39.png" width="300"> <img src="https://github.com/Adeon18/Gaem/blob/main/game/art/Tilemap/decorations/l0_sprite_1.png" width="30"> <img src="https://user-images.githubusercontent.com/73172589/145734017-696f85dc-1257-4540-8b3d-fcfdad1a408c.png" width="270"> <img src="https://github.com/Adeon18/Gaem/blob/main/game/art/Tilemap/decorations/l0_sprite_1.png" width="30"> <img src="https://user-images.githubusercontent.com/73172589/145734115-9c3b23fa-ea67-4212-8eac-2d9617995a4f.png" width="230">
+<img src="https://user-images.githubusercontent.com/73172589/145733849-64a64dea-8493-4535-a0c7-0ec7551ecc39.png" width="300"> <img src="https://github.com/Adeon18/Gaem/blob/main/game/art/Tilemap/decorations/l0_sprite_1.png" width="30"> <img src="https://user-images.githubusercontent.com/73172589/145734460-44e6859c-2786-431f-a496-ca372de39f5a.png" width="220"> <img src="https://github.com/Adeon18/Gaem/blob/main/game/art/Tilemap/decorations/l0_sprite_1.png" width="30"> <img src="https://user-images.githubusercontent.com/73172589/145734115-9c3b23fa-ea67-4212-8eac-2d9617995a4f.png" width="230">
 
 ![image](https://user-images.githubusercontent.com/73172589/145733644-f79ee4e1-5240-4f1b-9383-c4e4134d8165.png)
 
