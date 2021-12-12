@@ -7,8 +7,10 @@ func _ready():
 	radius.scale.y = 10
 
 func _process(delta):
-	if is_active and active_timer.is_processing():
+	if is_active:
 		$AnimatedSprite.animation = "hacked"
-	else:
-		$AnimatedSprite.animation = "default"
-		is_active = false
+
+
+func _on_ActiveTimer_timeout():
+	$AnimatedSprite.animation = "default"
+	is_active = false

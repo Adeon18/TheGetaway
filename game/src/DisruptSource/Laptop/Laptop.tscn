@@ -26,4 +26,6 @@ script = ExtResource( 4 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="." index="0"]
 frames = SubResource( 1 )
-animation = "hacked"
+playing = true
+
+[connection signal="timeout" from="ActiveTimer" to="." method="_on_ActiveTimer_timeout"]
