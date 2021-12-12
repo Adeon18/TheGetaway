@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://art/Laptop/l0_sprite_11.png" type="Texture" id=1]
 [ext_resource path="res://src/DisruptSource/DisruptSource.tscn" type="PackedScene" id=2]
@@ -6,6 +6,7 @@
 [ext_resource path="res://DisruptSource.gd" type="Script" id=4]
 [ext_resource path="res://art/Laptop/l0_sprite_10.png" type="Texture" id=5]
 [ext_resource path="res://art/Laptop/l0_sprite_08.png" type="Texture" id=6]
+[ext_resource path="res://snd/fignia_cut.mp3" type="AudioStream" id=7]
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
@@ -27,5 +28,9 @@ script = ExtResource( 4 )
 [node name="AnimatedSprite" type="AnimatedSprite" parent="." index="0"]
 frames = SubResource( 1 )
 playing = true
+
+[node name="ActiveStreamPlayer2D" type="AudioStreamPlayer2D" parent="." index="4"]
+stream = ExtResource( 7 )
+volume_db = -15.0
 
 [connection signal="timeout" from="ActiveTimer" to="." method="_on_ActiveTimer_timeout"]
