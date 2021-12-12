@@ -118,7 +118,7 @@ func make_turn():
 			# if disturbed, move to the location of disturption
 			dest_pos_tile = Tilemap.world_to_map(distruption_source)
 			path = Tilemap._get_path(cur_pos_tile, dest_pos_tile)
-			if path:
+			if len(path) > 1:
 				# if there is path, move
 				next_pos_vec = path[0] - cur_pos_tile
 			else:
