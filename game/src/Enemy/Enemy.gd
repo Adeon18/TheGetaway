@@ -179,8 +179,11 @@ func brein_stop():
 func get_class(): return "Enemy"
 
 func look_for_player():
+	
 	var dif_in_dists = global_position - Player.global_position
 	var dist_to = sqrt(dif_in_dists.x * dif_in_dists.x + dif_in_dists.y*dif_in_dists.y)
+	if dist_to < 2*step:
+		Player.die()
 	if dist_to < sight_dist:
 		var directState = get_world_2d().direct_space_state
 		var targetPosition = Player.global_position

@@ -98,9 +98,19 @@ func process_movement():
 		moveVector = Vector2.RIGHT
 	elif Input.is_action_just_pressed("ui_left"):
 		moveVector = Vector2.LEFT
+		
+func die():
+	print("ded")
+	$SpriteContainer/Sprite.visible = false
+	$DeathParticles.emitting = true
+	$DeathTimer.start()
 
 
 func make_turn():
 	pass
 # OLEXIY GAVNOCODE
 func get_class(): return "Player"
+
+
+func _on_DeathTimer_timeout():
+	queue_free()
