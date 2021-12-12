@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://src/Player/Player.gd" type="Script" id=1]
 [ext_resource path="res://art/Player/player.png" type="Texture" id=2]
@@ -52,6 +52,16 @@ nodes/TimeScale/position = Vector2( 300, 180 )
 nodes/output/position = Vector2( 500, 200 )
 node_connections = [ "output", 0, "TimeScale", "TimeScale", 0, "Animation" ]
 
+[sub_resource type="ParticlesMaterial" id=7]
+emission_shape = 1
+emission_sphere_radius = 25.83
+flag_disable_z = true
+gravity = Vector3( 0, 150, 0 )
+orbit_velocity = 0.0
+orbit_velocity_random = 0.0
+scale = 4.0
+color = Color( 0.227451, 0.721569, 0.298039, 1 )
+
 [node name="Player" type="KinematicBody2D"]
 collision_mask = 9
 script = ExtResource( 1 )
@@ -84,3 +94,18 @@ scale = Vector2( 2, 2 )
 z_index = 3
 z_as_relative = false
 texture = ExtResource( 3 )
+
+[node name="DeathParticles" type="Particles2D" parent="."]
+z_index = 11
+emitting = false
+amount = 153
+lifetime = 2.0
+one_shot = true
+explosiveness = 0.91
+randomness = 0.3
+process_material = SubResource( 7 )
+
+[node name="DeathTimer" type="Timer" parent="."]
+wait_time = 2.0
+
+[connection signal="timeout" from="DeathTimer" to="." method="_on_DeathTimer_timeout"]
