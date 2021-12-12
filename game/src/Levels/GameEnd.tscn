@@ -1,0 +1,47 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://src/UI/DynamicText.gd" type="Script" id=1]
+[ext_resource path="res://art/Fonts/Pixeled.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://snd/keyboard_click1.mp3" type="AudioStream" id=3]
+
+[sub_resource type="DynamicFont" id=1]
+size = 70
+outline_size = 4
+outline_color = Color( 0.192157, 0.266667, 0.235294, 1 )
+font_data = ExtResource( 2 )
+
+[node name="GameStart" type="Node2D"]
+
+[node name="DynamicText" type="Node2D" parent="."]
+position = Vector2( 8, 0 )
+script = ExtResource( 1 )
+messages = {
+1: "you escaped",
+2: "the matrix is falling",
+3: "you did it!"
+}
+
+[node name="Label" type="Label" parent="DynamicText"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = 1920.0
+margin_bottom = 1080.0
+custom_colors/font_color = Color( 0.152941, 0.67451, 0.309804, 1 )
+custom_fonts/font = SubResource( 1 )
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="NextCharTimer" type="Timer" parent="DynamicText"]
+
+[node name="NextMessageTimer" type="Timer" parent="DynamicText"]
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="DynamicText"]
+position = Vector2( 960, 576 )
+stream = ExtResource( 3 )
+volume_db = -5.0
+
+[connection signal="timeout" from="DynamicText/NextCharTimer" to="DynamicText" method="_on_NextCharTimer_timeout"]
+[connection signal="timeout" from="DynamicText/NextMessageTimer" to="DynamicText" method="_on_NextMessageTimer_timeout"]
