@@ -11,5 +11,5 @@ dest_files=[ "res://.import/fignia_cut.mp3-7bb0d1ea4f81fb2ef942de2c275407ce.mp3s
 
 [params]
 
-loop=true
+loop=false
 loop_offset=0
