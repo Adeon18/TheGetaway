@@ -83,6 +83,7 @@ z_index = 2
 z_as_relative = false
 texture = ExtResource( 3 )
 offset = Vector2( -25, 13 )
+color = Color( 0.152941, 0.67451, 0.309804, 1 )
 shadow_enabled = true
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
