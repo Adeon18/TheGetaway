@@ -37,11 +37,18 @@ var brein_stopped: bool = false
 export var stop_brein_for: int = 3
 var brein_was_stopped_for: int = 0
 
+enum STATE {IDLE, TRANSITIONING}
+var current_state = STATE.IDLE
+
+var target_position = Vector2()
+var lerp_speed = 30
+
 onready var Tilemap: TileMap = get_node("../../TileMap")
 onready var Player: Player = get_parent().get_node("Player")
 onready var PlayerDetector = get_node("PlayerDetector")
 onready var PatroolPointA = get_node("PatroolPointA")
 onready var PatroolPointB = get_node("PatroolPointB")
+onready var FOVLight = get_node("FOVLight")
 
 signal finish_turn
 
@@ -49,6 +56,14 @@ signal finish_turn
 func _ready():
 	pass
 
+
+func _physics_process(delta):
+	if current_state == STATE.TRANSITIONING:
+		if (abs(global_position.x - target_position.x) > 0.01) or (abs(global_position.y - target_position.y) > 0.01):
+			global_position = lerp(global_position, target_position, lerp_speed*delta)
+		else:
+			global_position = target_position
+			current_state = STATE.IDLE
 
 func make_turn():
 	"""
@@ -86,10 +101,13 @@ func make_turn():
 			next_pos_vec = Vector2.ZERO
 			curr_waited += 1
 		
-		global_position += next_pos_vec * step
+#		global_position += next_pos_vec * step
+		target_position = global_position + next_pos_vec * step
+		current_state = STATE.TRANSITIONING
 
 		if next_pos_vec != Vector2.ZERO:
 			PlayerDetector.rotation_degrees = turn_dict[next_pos_vec]
+			FOVLight.rotation_degrees = turn_dict[next_pos_vec]+90
 		prev_pos_vec = next_pos_vec
 		PatroolPointA.global_position -= prev_pos_vec * step
 		PatroolPointB.global_position -= prev_pos_vec * step
