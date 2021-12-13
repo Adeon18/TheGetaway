@@ -21,4 +21,4 @@ The Player wakes up in the office. He is haunted by the evil agents. If he gets 
 * [Olexiy Hoyev](https://github.com/alexg-lviv)
 #### 2D artists:
 * [Oleksandra Stasiuk](https://github.com/oleksadobush)
-* [Anna-Alina Bondarets](https://github.com/alorthius)
+* [Alina Bondarets](https://github.com/alorthius)
