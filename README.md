@@ -5,7 +5,7 @@
 ---
 
 ### Overview
-**The Getaway** is a turn-based top-down 2D game with stealth-based gameplay mechanics, written during two-days gamejam contest. The retro style of the game and its black-and-green color palette were chosen in order to fit the Matrix-inspired theme and athmosphere.
+**The Getaway** is a _turn-based top-down 2D game_ with stealth-based gameplay mechanics, written during two-days gamejam contest. The retro style of the game and its black-and-green color palette were chosen in order to fit the Matrix-inspired theme and athmosphere.
 
 The Player wakes up in the office. He is haunted by the evil agents. If he gets close to agents, he dies. The Player should distract them using his special ability directly, or by interracting with surrounding objects. The aim is to pass the level without getting caught, while the world keeps breaking down more and more.
 
@@ -13,6 +13,10 @@ The Player wakes up in the office. He is haunted by the evil agents. If he gets 
 
 ![image](https://user-images.githubusercontent.com/73172589/145733644-f79ee4e1-5240-4f1b-9383-c4e4134d8165.png)
 
+
+### Details
+
+The game uses the **Godot Game Engine** and is avalible for _MacOS, Linux and Windows_.
 
 ### Contributors
 #### Coders:
